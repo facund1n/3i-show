@@ -16,7 +16,6 @@ function StickyNav() {
     <Navbar className="fgris" variant="dark" expand="lg" sticky="top">
       <Container fluid>
         <Navbar.Brand href="#">
-          {" "}
           <img
             alt="logo"
             src="/img/logo.ico"

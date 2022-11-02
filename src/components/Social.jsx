@@ -21,7 +21,7 @@ const Social = () => {
         alt="logo"
         src="/img/tw.png"
         height="40px"
-        className="d-inline-block align-top "
+        className="d-inline-block align-top"
       />
     </Container>
   );
