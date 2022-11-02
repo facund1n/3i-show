@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import StickyNav from "../components/StickyNav";
 import Carousel from "../components/Carousel";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
@@ -12,6 +13,7 @@ const Main = () => {
         className="px-0 d-flex flex-column min-vh-100"
         style={{ backgroundColor: "#000000" }}
       >
+        <StickyNav />
         <Header />
         <Landing />
         <Carousel />

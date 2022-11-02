@@ -4,3 +4,29 @@
 *{
     color:#FFFFFF
 }
+
+.fnegro{
+    background-color: #000000 ;
+}
+.fgris{
+    background-color: #121212 ;
+}
+.famarillo{
+    background-color: #F5c518 ;
+}
+.fblanco{
+    background-color: #FFFFFF ;
+}
+
+.lnegro{
+    color: #000000 ;
+}
+.lgris{
+    color: #121212 ;
+}
+.lamarillo{
+    color: #F5c518 ;
+}
+.lblanco{
+    color: #FFFFFF ;
+}
