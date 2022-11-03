@@ -4,26 +4,20 @@ import Social from "./Social";
 const Footer = () => {
   return (
     <>
-      <Container
-        fluid
-        className="mt-auto py-4 text-center"
-        style={{
-          backgroundImage: "linear-gradient(to top, #2e2e2e, transparent)",
-        }}
-      >
-        <Row lg={4} sm={3} xs={2} className="justify-content-center">
-          <Col>
-            <img alt="logo" src="/img/logo.ico" className="img-fluid" />
-          </Col>
-          <Col>
-            <p>Condiciones de uso</p>
-            <p>Política de privacidad</p>
+      <Container fluid className="mt-auto py-4 text-center gradient1">
+        <Row lg={6} sm={3} xs={1} className="justify-content-center">
+          <Col className="align-items-center">
+            <img alt="logo" src="/img/logo.ico" className="img-fluid me-auto" />
           </Col>
           <Col>
             <Social />
+            <p>Política de privacidad</p>
+            <p>Condiciones de uso</p>
           </Col>
         </Row>
-        <p>copyright - 2022</p>
+        <Row>
+          <p>copyright - 2022</p>
+        </Row>
       </Container>
     </>
   );
