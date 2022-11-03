@@ -13,8 +13,8 @@ const Main = () => {
         <Header />
         <Landing />
         <Carousel />
+        <Footer />
       </Container>
-      <Footer />
     </>
   );
 };
