@@ -13,8 +13,8 @@ import Social from "./Social";
 
 function StickyNav() {
   return (
-    <Navbar className="fgris" variant="dark" expand="lg" sticky="top">
-      <Container fluid>
+    <Navbar className="b-grey" variant="dark" expand="lg" sticky="top">
+      <Container>
         <Navbar.Brand href="#">
           <img
             alt="logo"

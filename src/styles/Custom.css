@@ -2,31 +2,34 @@
 #000000 #121212 #F5c518 #FFFFFF*/
 
 *{
+ font-family: 'Roboto', sans-serif;
     color:#FFFFFF
 }
 
-.fnegro{
+.b-black{
     background-color: #000000 ;
 }
-.fgris{
+.b-grey{
     background-color: #121212 ;
 }
-.famarillo{
+.b-yellow{
     background-color: #F5c518 ;
 }
-.fblanco{
+.b-white{
     background-color: #FFFFFF ;
 }
 
-.lnegro{
+.t-black{
     color: #000000 ;
 }
-.lgris{
+.t-grey{
     color: #121212 ;
 }
-.lamarillo{
+.t-yellow{
     color: #F5c518 ;
 }
-.lblanco{
+.t-white{
     color: #FFFFFF ;
 }
+
+.gradient1{background-image: linear-gradient(to top, #2e2e2e, transparent)}

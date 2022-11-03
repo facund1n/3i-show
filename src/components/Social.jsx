@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 
 const Social = () => {
   return (
-    <Container className="d-flex justify-content-center my-2">
+    <Container className="d-flex justify-content-center my-1">
       <img
         alt="logo"
         src="/img/fb.png"
