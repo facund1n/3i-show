@@ -3,7 +3,9 @@ import Main from "./views/Main";
 function App() {
   return (
     <>
-      <Main />
+      <div className="b-black">
+        <Main />
+      </div>
     </>
   );
 }
