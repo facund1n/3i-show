@@ -1,4 +1,4 @@
-# Blow Show Solo Proyect
+# Blog Show Solo Proyect
 
 ## Available Scripts
 
