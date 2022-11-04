@@ -7,7 +7,7 @@ const Footer = () => {
       <Container fluid className="mt-auto py-4 text-center gradient1">
         <Row lg={6} sm={3} xs={1} className="justify-content-center">
           <Col className="align-items-center">
-            <img alt="logo" src="/img/logo.ico" className="img-fluid me-auto" />
+            <img alt="logo" src="/img/hmb.png" className="img-fluid me-auto" />
           </Col>
           <Col>
             <Social />

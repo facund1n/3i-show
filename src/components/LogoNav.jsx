@@ -1,0 +1,30 @@
+/* 
+Home
+Destacado
+Contacto
+Me gusta (debería agregarse un icono con la cantidad de favoritos que se agregan -badge-)
+Icono de Contacto (icono a la derecha) que nos va a llevar al formulario de contacto.
+  
+Mobile:
+    - logo + menú hamburguesa ( con buscador ) (referencia página la gaceta) */
+
+import { Container, Navbar } from "react-bootstrap";
+
+function StickyNav() {
+  return (
+    <Navbar expand="lg">
+      <Container>
+        <Navbar.Brand className="ms-auto">
+          <img
+            alt="logo2"
+            src="/img/hmb.png"
+            height="60px"
+            className="d-inline-block align-top m-auto"
+          />
+        </Navbar.Brand>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default StickyNav;
