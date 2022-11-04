@@ -15,14 +15,15 @@ function StickyNav() {
   return (
     <Navbar className="b-grey" variant="dark" expand="lg" sticky="top">
       <Container>
+        {" "}
         <Navbar.Brand href="#">
           <img
             alt="logo"
-            src="/img/logo.ico"
-            height="40px"
-            className="d-inline-block align-top m-auto"
+            src="/img/logo.png"
+            height="20px"
+            className="d-block m-0 p-0"
           />
-        </Navbar.Brand>
+        </Navbar.Brand>{" "}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto align-items-center">
