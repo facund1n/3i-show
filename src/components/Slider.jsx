@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "flex",
-        margin: "-1.2rem 1rem 0 0",
+        margin: "-2rem 1rem 0 0",
         padding: "15rem 0 15rem 0",
       }}
       onClick={onClick}
@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "flex",
-        margin: "-1.2rem 0 0 1rem",
+        margin: "-1.5rem 0 0 1rem",
         padding: "15rem 0 15rem 0",
         boxSizing: "initial",
         zIndex: "1",
