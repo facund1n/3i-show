@@ -1,5 +1,5 @@
 /* Paleta de colores:
-#000000 #121212 #F5c518 #FFFFFF*/
+#000000 #121212 #F5c518 #FFFFFF */
 
 *{
  font-family: 'Roboto', sans-serif;
@@ -19,16 +19,16 @@
     background-color: #FFFFFF ;
 }
 
-.t-black{
+.f-black{
     color: #000000 ;
 }
-.t-grey{
+.f-grey{
     color: #121212 ;
 }
-.t-yellow{
+.f-yellow{
     color: #F5c518 ;
 }
-.t-white{
+.f-white{
     color: #FFFFFF ;
 }
 
