@@ -10,7 +10,11 @@ const LogIn = () => {
 
   return (
     <>
-      <Link className="f-yellow" onClick={() => setShow(true)}>
+      <Link
+        className="f-yellow"
+        onClick={() => setShow(true)}
+        style={{ textDecoration: "inherit" }}
+      >
         Iniciar Sesión
       </Link>
       <div className="f-yellow mx-1"> | </div>
@@ -34,9 +38,6 @@ const LogIn = () => {
           <Modal.Body>
             <LogInForm />
           </Modal.Body>
-          {/* DENTRO DEL BODY CREAR COMPONNENTE CON EL FORMULARIO DE LOGIN */}
-          <p>NO estás registrado aún? haz click aquí</p>
-          <p>Olvidaste contraseña?</p>
         </div>
       </Modal>
     </>
