@@ -9,7 +9,7 @@ Mobile:
     - logo + menú hamburguesa ( con buscador ) (referencia página la gaceta) */
 
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
-import Social from "./Social";
+import Social from "../Social";
 
 function StickyNav() {
   return (

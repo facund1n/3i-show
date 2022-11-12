@@ -10,7 +10,11 @@ const Register = () => {
 
   return (
     <>
-      <Link className="f-yellow" onClick={() => setShow(true)}>
+      <Link
+        className="f-yellow"
+        onClick={() => setShow(true)}
+        style={{ textDecoration: "inherit" }}
+      >
         Registro
       </Link>
       <Modal

@@ -18,7 +18,7 @@ function StickyNav() {
           <img
             alt="logo2"
             src="/img/hmb.png"
-            height="60px"
+            height="40px"
             className="d-inline-block align-top m-auto"
           />
         </Navbar.Brand>
