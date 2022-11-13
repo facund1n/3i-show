@@ -6,19 +6,29 @@ import { Link } from "react-router-dom";
 const Articles = ({ article }) => {
   return (
     <>
-      <Link to={`/products/${article.id}`}>
-        <Card className="my-1 bg-dark" style={{ height: "95%" }}>
-          <Card.Body style={{ height: "50%" }}>
+      <Link
+        to={`/articles/${article.id}`}
+        style={{ textDecoration: "inherit" }}
+      >
+        <Card fluid className="my-1 bg-dark">
+          <div style={{ height: "50%" }} action variant="dark">
             <Card.Img
               variant="top"
-              style={{ height: "100%", width: "100%" }}
-              src={article.image}
+              style={{ height: "230px" }}
+              src={article.imageSm}
+              alt={article.altSm}
             />
-          </Card.Body>
-          <Card.Footer style={{ height: "50%" }}>
-            <strong>{article.title}</strong>
-            <h4>${article.price}</h4>
-          </Card.Footer>
+          </div>
+
+          <div
+            className="m-1 text-left min-vh-25"
+            style={{ height: "230px" }}
+            action
+            variant="dark"
+          >
+            <h4>{article.title}</h4>
+            <article>{article.description}</article>
+          </div>
         </Card>
       </Link>
     </>
