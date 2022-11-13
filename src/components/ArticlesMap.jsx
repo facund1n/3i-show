@@ -10,7 +10,7 @@ const ProductMap = () => {
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=5")
+    fetch("http://localhost:4000/articles/all")
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));

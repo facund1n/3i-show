@@ -12,10 +12,11 @@ const ProductMap = () => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${params.id}`)
+    fetch(`http://localhost:4000/articles/${params.id}`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));
+    // eslint-disable-next-line
   }, []);
 
   return <>{isLoading ? <Loader /> : <ArticleDetail data={data} />}</>;
