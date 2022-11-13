@@ -10,7 +10,7 @@ const Articles = ({ article }) => {
         to={`/articles/${article.id}`}
         style={{ textDecoration: "inherit" }}
       >
-        <Card fluid className="my-1 bg-dark">
+        <Card className="my-1 bg-dark">
           <div style={{ height: "50%" }} action variant="dark">
             <Card.Img
               variant="top"
