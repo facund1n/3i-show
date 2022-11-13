@@ -12,7 +12,7 @@ import { Container, Navbar } from "react-bootstrap";
 
 function StickyNav() {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" className="image">
       <Container>
         <Navbar.Brand className="ms-auto">
           <img
