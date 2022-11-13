@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 import LogIn from "../components/LogIn";
 import Register from "../components/Register";
-import ArticlesMap from "../components/ArticlesMap";
+import DestacadosMap from "../components/DestacadosMap";
 import Welcome from "../components/Welcome";
 import { Container } from "react-bootstrap";
 
@@ -22,7 +22,7 @@ const Main = () => {
         </Container>
         <Container />
         <Container />
-        <ArticlesMap />
+        <DestacadosMap />
         <Footer />
       </Container>
     </>
