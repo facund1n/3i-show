@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 // contendor que resguarda las cards con cada producto, le pasamos por props "data" que generó .map de componente ProductListing -> función ObtainData
 
-const Articles = ({ article }) => {
+const Articles = ({ destacado }) => {
   return (
     <>
       <Link
-        to={`/articles/${article.id}`}
+        to={`destacados/${destacado._id}`}
         style={{ textDecoration: "inherit" }}
       >
         <Card className="my-1 bg-dark">
@@ -15,8 +15,8 @@ const Articles = ({ article }) => {
             <Card.Img
               variant="top"
               style={{ height: "230px" }}
-              src={article.imageSm}
-              alt={article.altSm}
+              src={destacado.imageSm}
+              alt={destacado.altSm}
             />
           </div>
 
@@ -26,8 +26,8 @@ const Articles = ({ article }) => {
             action
             variant="dark"
           >
-            <h4>{article.title}</h4>
-            <article>{article.description}</article>
+            <h4>{destacado.title}</h4>
+            <article>{destacado.description}</article>
           </div>
         </Card>
       </Link>

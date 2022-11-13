@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
 
-import ArticlesGrid from "./ArticlesGrid";
+import DestacadosGrid from "./DestacadosGrid";
 
-// consumo API
+// consumo API - destacados
 
-const ProductMap = () => {
+const DestacadosMap = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("http://localhost:4000/articles/all")
+    fetch("http://localhost:4000/destacados/all")
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));
   }, []);
 
-  return <>{isLoading ? <Loader /> : <ArticlesGrid data={data} />}</>;
+  return <>{isLoading ? <Loader /> : <DestacadosGrid data={data} />}</>;
 };
 
-export default ProductMap;
+export default DestacadosMap;

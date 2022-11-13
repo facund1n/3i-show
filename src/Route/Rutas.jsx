@@ -3,7 +3,7 @@ import ErrorPage from "../views/ErrorPage";
 /* import LogIn from "../components/LogIn"; */
 /* import Register from "../components/Register"; */
 import Main from "../views/Main";
-import ArticlesDetailMap from "../components/ArticlesDetailMap";
+import DestacadoDetailMap from "../components/DestacadoDetailMap";
 
 const Rutas = () => {
   return (
@@ -11,7 +11,7 @@ const Rutas = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path={"/products/:id"} element={<ArticlesDetailMap />} />
+        <Route path={"/destacados/:id"} element={<DestacadoDetailMap />} />
       </Routes>
     </BrowserRouter>
   );

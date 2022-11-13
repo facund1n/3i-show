@@ -1,15 +1,15 @@
 import { CardGroup, Col, Container, Row } from "react-bootstrap";
-import Articles from "./Articles"; // Componente
+import Destacado from "./Destacado"; // Componente
 
-const ArticlesMapGrid = ({ data }) => {
+const DestacadosMapGrid = ({ data }) => {
   return (
     <Container>
       <h1 className="f-yellow">| Destacados</h1>
       <CardGroup>
         <Row xs={2} md={4} lg={5}>
-          {data.map((article, i) => (
+          {data.map((destacado, i) => (
             <Col sm={4} key={i}>
-              <Articles article={article} />
+              <Destacado destacado={destacado} />
             </Col>
           ))}
         </Row>
@@ -18,4 +18,4 @@ const ArticlesMapGrid = ({ data }) => {
   );
 };
 
-export default ArticlesMapGrid;
+export default DestacadosMapGrid;
