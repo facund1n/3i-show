@@ -17,8 +17,7 @@ const ArticleDetail = ({ data }) => {
           </Col>
           <Col>
             <Card.Footer>
-              <p>{data.description}</p>
-              <h4>${data.price}</h4>
+              <article>{data.description}</article>
             </Card.Footer>
             <Button variant="Primary">Comprar</Button>
           </Col>

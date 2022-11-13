@@ -8,14 +8,9 @@
 
 .image {
   background-image: url(https://www.heavyblogisheavy.com/content/images/2022/10/hbih-doomsday.png);
-  width: 100%;
-
-  object-fit: contain;
 }
 .image2 {
   background-image: url(https://www.heavyblogisheavy.com/content/images/2022/11/hbih-unmetal.png);
-  width: 100px;
-  object-fit: contain;
 }
 .b-black {
   background-color: #000000;
