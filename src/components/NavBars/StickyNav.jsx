@@ -15,7 +15,7 @@ function StickyNav() {
   return (
     <Navbar className="b-grey" variant="dark" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
           <img
             alt="logo"
             src="/img/logo.png"
@@ -27,8 +27,10 @@ function StickyNav() {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto align-items-center">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#action2">Destacado</Nav.Link>
-            <Nav.Link href="#action2">Categorías</Nav.Link>
+            <Nav.Link href="#destacadoIndex">Destacados</Nav.Link>
+            <Nav.Link href="#noticiasIndex">Noticias</Nav.Link>
+            <Nav.Link href="#">Conciertos</Nav.Link>
+            <Nav.Link href="#">Fotos</Nav.Link>
             {/* ME GUSTA? PREGUNTAR*/}
             <Social /> {/* COMPONENTE SOCIAL */}
           </Nav>
