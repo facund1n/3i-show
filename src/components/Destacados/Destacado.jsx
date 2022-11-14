@@ -10,7 +10,7 @@ const Articles = ({ destacado }) => {
         to={`destacados/${destacado._id}`}
         style={{ textDecoration: "inherit" }}
       >
-        <Card className="my-1 bg-dark">
+        <Card className="mb-2 bg-dark">
           <div style={{ height: "50%" }} action variant="dark">
             <Card.Img
               variant="top"
@@ -19,9 +19,8 @@ const Articles = ({ destacado }) => {
               alt={destacado.altSm}
             />
           </div>
-
           <div
-            className="m-1 text-left min-vh-25"
+            className="m-1"
             style={{ height: "230px" }}
             action
             variant="dark"
