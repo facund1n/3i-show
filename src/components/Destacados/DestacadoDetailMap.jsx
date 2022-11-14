@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader";
 import DestacadoDetail from "./DestacadoDetail";
 
-//muestra 1 solo producto por ID
+// 2.1
 
 const DestacadoMap = () => {
   const [data, setData] = useState([]);

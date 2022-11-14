@@ -2,6 +2,8 @@ import { Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
 
+// 2.2
+
 const DestacadoDetail = ({ data }) => {
   return (
     <>

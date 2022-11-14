@@ -1,9 +1,9 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// contendor que resguarda las cards con cada producto, le pasamos por props "data" que generó .map de componente ProductListing -> función ObtainData
+// 2
 
-const Articles = ({ destacado }) => {
+const Destacado = ({ destacado }) => {
   return (
     <>
       <Link
@@ -29,4 +29,4 @@ const Articles = ({ destacado }) => {
   );
 };
 
-export default Articles;
+export default Destacado;
