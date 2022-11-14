@@ -15,7 +15,7 @@ const Register = () => {
         onClick={() => setShow(true)}
         style={{ textDecoration: "inherit" }}
       >
-        Registro
+        REGISTRO
       </Link>
       <Modal
         show={show}

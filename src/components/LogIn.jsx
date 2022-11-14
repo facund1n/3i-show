@@ -15,10 +15,9 @@ const LogIn = () => {
         onClick={() => setShow(true)}
         style={{ textDecoration: "inherit" }}
       >
-        Iniciar Sesión
+        INICIAR SESIÓN
       </Link>
       <div className="f-yellow mx-1"> | </div>
-
       <Modal
         show={show}
         onHide={handleClose}
