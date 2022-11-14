@@ -11,7 +11,7 @@ const Articles = ({ noticia }) => {
         style={{ textDecoration: "inherit" }}
       >
         <Card className="my-1 bg-dark">
-          <div style={{ height: "50%" }} action variant="dark">
+          <div style={{ height: "50%" }} variant="dark">
             <Card.Img
               variant="top"
               style={{ height: "230px" }}
@@ -23,7 +23,6 @@ const Articles = ({ noticia }) => {
           <div
             className="m-1 text-left min-vh-25"
             style={{ height: "230px" }}
-            action
             variant="dark"
           >
             <h4>{noticia.title}</h4>

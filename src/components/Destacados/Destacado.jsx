@@ -11,7 +11,7 @@ const Articles = ({ destacado }) => {
         style={{ textDecoration: "inherit" }}
       >
         <Card className="mb-2 bg-dark">
-          <div style={{ height: "50%" }} action variant="dark">
+          <div variant="dark">
             <Card.Img
               variant="top"
               style={{ height: "230px" }}
@@ -19,12 +19,7 @@ const Articles = ({ destacado }) => {
               alt={destacado.altSm}
             />
           </div>
-          <div
-            className="m-1"
-            style={{ height: "230px" }}
-            action
-            variant="dark"
-          >
+          <div className="m-1" style={{ height: "230px" }} variant="dark">
             <h4>{destacado.title}</h4>
             <article>{destacado.description}</article>
           </div>
