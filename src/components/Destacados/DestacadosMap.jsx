@@ -3,7 +3,7 @@ import Loader from "../Loader";
 
 import DestacadosGrid from "./DestacadosGrid";
 
-// consumo API - destacados
+// consumo API - destacados 1
 
 const DestacadosMap = () => {
   const [data, setData] = useState([]);

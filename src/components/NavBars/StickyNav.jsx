@@ -27,9 +27,9 @@ function StickyNav() {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto align-items-center">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#destacadoIndex">Destacados</Nav.Link>
-            <Nav.Link href="#noticiasIndex">Noticias</Nav.Link>
-            <Nav.Link href="#">Conciertos</Nav.Link>
+            <Nav.Link href="/#destacadoIndex">Destacados</Nav.Link>
+            <Nav.Link href="/#noticiasIndex">Noticias</Nav.Link>
+            <Nav.Link href="/#showsIndex">Shows</Nav.Link>
             <Nav.Link href="#">Fotos</Nav.Link>
             {/* ME GUSTA? PREGUNTAR*/}
             <Social /> {/* COMPONENTE SOCIAL */}

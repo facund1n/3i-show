@@ -3,20 +3,17 @@ import { Link } from "react-router-dom";
 
 // 3
 
-const Articles = ({ noticia }) => {
+const Show = ({ show }) => {
   return (
     <>
-      <Link
-        to={`noticias/${noticia._id}`}
-        style={{ textDecoration: "inherit" }}
-      >
+      <Link to={`shows/${show._id}`} style={{ textDecoration: "inherit" }}>
         <Card className="my-1 bg-dark">
           <div style={{ height: "50%" }} variant="dark">
             <Card.Img
               variant="top"
               style={{ height: "230px" }}
-              src={noticia.imageSm}
-              alt={noticia.altSm}
+              src={show.imageSm}
+              alt={show.altSm}
             />
           </div>
 
@@ -25,8 +22,8 @@ const Articles = ({ noticia }) => {
             style={{ height: "230px" }}
             variant="dark"
           >
-            <h4>{noticia.title}</h4>
-            <article>{noticia.description}</article>
+            <h4>{show.title}</h4>
+            <article>{show.description}</article>
           </div>
         </Card>
       </Link>
@@ -34,4 +31,4 @@ const Articles = ({ noticia }) => {
   );
 };
 
-export default Articles;
+export default Show;

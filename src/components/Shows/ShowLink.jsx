@@ -1,12 +1,10 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// 2.3
-
-const DestacadoLink = ({ article }) => {
+const ShowLink = ({ article }) => {
   return (
     <>
-      <Link to={`/products/${article.id}`}>
+      <Link to={`/show/${article.id}`}>
         <Card className="my-1">
           <Card.Body>
             <Card.Img
@@ -25,4 +23,4 @@ const DestacadoLink = ({ article }) => {
   );
 };
 
-export default DestacadoLink;
+export default ShowLink;

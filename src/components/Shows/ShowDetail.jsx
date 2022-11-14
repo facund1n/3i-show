@@ -4,7 +4,7 @@ import Footer from "../Footer";
 
 // 2.2
 
-const DestacadoDetail = ({ data }) => {
+const ShowDetail = ({ data }) => {
   return (
     <>
       <StickyNav />
@@ -27,4 +27,4 @@ const DestacadoDetail = ({ data }) => {
   );
 };
 
-export default DestacadoDetail;
+export default ShowDetail;

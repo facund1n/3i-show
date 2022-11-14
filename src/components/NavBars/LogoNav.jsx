@@ -10,7 +10,7 @@ Mobile:
 
 import { Container, Navbar } from "react-bootstrap";
 
-function StickyNav() {
+function LogoNav() {
   return (
     <Navbar expand="lg" className="image">
       <Container>
@@ -27,4 +27,4 @@ function StickyNav() {
   );
 }
 
-export default StickyNav;
+export default LogoNav;
