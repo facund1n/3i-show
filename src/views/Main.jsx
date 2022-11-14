@@ -1,12 +1,13 @@
 import StickyNav from "../components/NavBars/StickyNav";
 import LogoNav from "../components/NavBars/LogoNav";
-
 import Footer from "../components/Footer";
 
 import LogIn from "../components/LogIn";
 import Register from "../components/Register";
-import DestacadosMap from "../components/DestacadosMap";
 import Welcome from "../components/Welcome";
+
+import DestacadosMap from "../components/Destacados/DestacadosMap";
+
 import { Container } from "react-bootstrap";
 
 const Main = () => {
