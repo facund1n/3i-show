@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
-import StickyNav from "../components/NavBars/StickyNav";
-import Footer from "../components/Footer";
+import StickyNav from "../NavBars/StickyNav";
+import Footer from "../Footer";
+
 const DestacadoDetail = ({ data }) => {
   return (
     <>

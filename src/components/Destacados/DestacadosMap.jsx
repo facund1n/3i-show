@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Loader from "./Loader";
+import Loader from "../Loader";
 
 import DestacadosGrid from "./DestacadosGrid";
 

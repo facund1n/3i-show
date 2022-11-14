@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Article = ({ article }) => {
+const DestacadoLink = ({ article }) => {
   return (
     <>
       <Link to={`/products/${article.id}`}>
@@ -23,4 +23,4 @@ const Article = ({ article }) => {
   );
 };
 
-export default Article;
+export default DestacadoLink;
