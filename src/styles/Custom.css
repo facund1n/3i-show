@@ -27,15 +27,19 @@
 
 .f-black {
   color: #000000;
+  text-decoration: inherit;
 }
 .f-grey {
   color: #121212;
+  text-decoration: inherit;
 }
 .f-yellow {
   color: #f5c518;
+  text-decoration: inherit;
 }
 .f-white {
   color: #ffffff;
+  text-decoration: inherit;
 }
 
 .gradient1 {
