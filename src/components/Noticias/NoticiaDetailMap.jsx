@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader";
 import NoticiaDetail from "./NoticiaDetail";
 
-//muestra 1 solo producto por ID
+// 2.1
 
-const DestacadoMap = () => {
+const NoticiaMap = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
@@ -22,4 +22,4 @@ const DestacadoMap = () => {
   return <>{isLoading ? <Loader /> : <NoticiaDetail data={data} />}</>;
 };
 
-export default DestacadoMap;
+export default NoticiaMap;

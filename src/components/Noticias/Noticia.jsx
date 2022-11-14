@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// contendor que resguarda las cards con cada producto, le pasamos por props "data" que generó .map de componente ProductListing -> función ObtainData
+// 3
 
 const Articles = ({ noticia }) => {
   return (
@@ -21,7 +21,7 @@ const Articles = ({ noticia }) => {
           </div>
 
           <div
-            className="m-1 text-left min-vh-25"
+            className="m-1 text-left"
             style={{ height: "230px" }}
             variant="dark"
           >

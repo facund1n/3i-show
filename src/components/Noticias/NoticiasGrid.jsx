@@ -1,6 +1,8 @@
 import { CardGroup, Col, Container, Row } from "react-bootstrap";
 import Noticia from "./Noticia"; // Componente
 
+// 2
+
 const DestacadosMapGrid = ({ data }) => {
   return (
     <Container>
