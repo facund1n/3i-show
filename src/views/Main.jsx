@@ -9,6 +9,7 @@ import Welcome from "../components/Welcome";
 import DestacadosMap from "../components/Destacados/DestacadosMap";
 import NoticiasMap from "../components/Noticias/NoticiasMap";
 import ShowsMap from "../components/Shows/ShowsMap";
+/* import Slider from "../components/Slider/Slider"; */
 
 import { Container } from "react-bootstrap";
 
@@ -25,6 +26,7 @@ const Main = () => {
         <Welcome />
         <Container />
         <Container />
+        {/*         <Slider /> */}
         <DestacadosMap />
         <NoticiasMap />
         <ShowsMap />
