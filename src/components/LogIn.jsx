@@ -25,14 +25,7 @@ const LogIn = () => {
         keyboard={false}
         centered
       >
-        <Modal.Header closeButton>
-          <img
-            alt="logo"
-            src="/img/logo.png"
-            height="20px"
-            className="d-block m-0 p-0"
-          />
-        </Modal.Header>
+        <Modal.Header closeButton></Modal.Header>
         <div className="b-grey">
           <Modal.Body>
             <LogInForm />
