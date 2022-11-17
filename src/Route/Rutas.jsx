@@ -6,7 +6,7 @@ import Main from "../views/Main";
 import DestacadoDetailMap from "../components/Destacados/DestacadoDetailMap";
 import NoticiaDetailMap from "../components/Noticias/NoticiaDetailMap";
 import ShowDetailMap from "../components/Shows/ShowDetailMap";
-
+import CommentBox from "../components/CommentBox";
 const Rutas = () => {
   return (
     <BrowserRouter>
@@ -16,6 +16,7 @@ const Rutas = () => {
         <Route path={"/destacados/:id"} element={<DestacadoDetailMap />} />
         <Route path={"/noticias/:id"} element={<NoticiaDetailMap />} />
         <Route path={"/shows/:id"} element={<ShowDetailMap />} />
+        <Route path={"/commentbox"} element={<CommentBox />} />
       </Routes>
     </BrowserRouter>
   );
