@@ -3,6 +3,7 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 const LogInForm = () => {
   const formik = useFormik({
@@ -59,11 +60,17 @@ const LogInForm = () => {
         ) : null}
       </Form.Group>
 
-      <div className="d-grid gap-2 mb-2">
+      <div className="d-grid gap-2 mb-2 f-black">
         <Button type="submit" variant="warning">
-          Iniciar sesión
+          <strong className="f-black">INICIAR SESIÓN</strong>
         </Button>
       </div>
+      <Link>
+        <div>NO estás registrado aún? haz click aquí</div>
+      </Link>
+      <Link>
+        <div>Olvidaste contraseña?</div>
+      </Link>
     </Form>
   );
 };

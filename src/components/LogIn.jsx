@@ -25,9 +25,7 @@ const LogIn = () => {
         keyboard={false}
         centered
       >
-        <Modal.Header closeButton variant="white">
-          <strong className="f-black">INICIAR SESIÓN</strong>
-        </Modal.Header>
+        <Modal.Header closeButton className="image3"></Modal.Header>
         <div className="image2">
           <Modal.Body>
             <LogInForm />

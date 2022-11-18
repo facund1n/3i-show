@@ -12,6 +12,11 @@
 .image2 {
   background-image: url(https://tinypic.host/images/2022/11/18/image244aaf25078826899.png);
 }
+.image3 {
+  background-image: url(https://tinypic.host/images/2022/11/18/imagemodal.png);
+  min-width: 100%;
+}
+
 .b-black {
   background-color: #000000;
 }
