@@ -10,18 +10,21 @@ const Destacado = ({ destacado }) => {
         to={`destacados/${destacado._id}`}
         style={{ textDecoration: "inherit" }}
       >
-        <Card className="mb-2 bg-dark">
-          <div variant="dark">
+        <Card className="mb-2 border-yellow links">
+          <div>
             <Card.Img
               variant="top"
-              style={{ height: "230px" }}
+              style={{ height: "200px" }}
               src={destacado.imageSm}
               alt={destacado.altSm}
             />
           </div>
-          <div className="m-1" style={{ height: "230px" }} variant="dark">
+          <div
+            className="mt-2 text-center d-flex align-items-center"
+            style={{ height: "200px" }}
+          >
             <h4>{destacado.title}</h4>
-            <article>{destacado.description}</article>
+            {/* <article>{destacado.description}</article> */}
           </div>
         </Card>
       </Link>

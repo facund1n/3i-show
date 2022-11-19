@@ -1,5 +1,4 @@
 // cheacar estructura y desctructuring de https://github.com/a-bianchi/rolling-codeschool-comisionI2/blob/master/lessons/39/src/components/FormularioTurno.js
-import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -12,13 +11,11 @@ const LogInForm = () => {
       password: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string()
-        .email("Ingrese email válido")
-        .required("Campo requerido"),
+      email: Yup.string().email("Ingrese email válido").required("Requerido"),
       password: Yup.string()
         .min(8, "mínimo 8 carácteres")
         .max(30, "máximo 30 carácteres")
-        .required("Campo requerido"),
+        .required("Requerido"),
     }),
     //AQUÍ VA EL FECTH, METHOD: POST:
     onSubmit: (values) => {
@@ -29,6 +26,8 @@ const LogInForm = () => {
   });
   return (
     <Form onSubmit={formik.handleSubmit}>
+      <span>Iniciar sesión:</span>
+      <hr />
       <Form.Group className="mb-3">
         <Form.Label>E-mail:</Form.Label>
         <Form.Control
@@ -51,6 +50,7 @@ const LogInForm = () => {
           id="password"
           name="password"
           type="password"
+          placeholder="ingrese contraseña"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
@@ -59,17 +59,23 @@ const LogInForm = () => {
           <div className="f-yellow mt-1">{formik.errors.password}</div>
         ) : null}
       </Form.Group>
-
+      {/* VER QUE ONDA CON EL PREVENT DEFAULT */}
+      {/* VER QUE ONDA CON EL PREVENT DEFAULT */}
+      {/* VER QUE ONDA CON EL PREVENT DEFAULT */}
       <div className="d-grid gap-2 mb-2 f-black">
         <Button type="submit" variant="warning">
           <strong className="f-black">INICIAR SESIÓN</strong>
         </Button>
       </div>
-      <Link>
-        <div>NO estás registrado aún? haz click aquí</div>
+      <hr />
+      <Link className="f-yellow">
+        <span className="f-yellow">
+          NO estás registrado aún? haz click aquí
+        </span>
       </Link>
-      <Link>
-        <div>Olvidaste contraseña?</div>
+      <br />
+      <Link className="f-yellow">
+        <span className="f-yellow">Olvidaste contraseña?</span>
       </Link>
     </Form>
   );

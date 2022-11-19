@@ -10,11 +10,7 @@ const LogIn = () => {
 
   return (
     <>
-      <Link
-        className="f-yellow"
-        onClick={() => setShow(true)}
-        style={{ textDecoration: "inherit" }}
-      >
+      <Link className="f-yellow links" onClick={() => setShow(true)}>
         INICIAR SESIÓN
       </Link>
       <div className="f-yellow mx-1"> | </div>
@@ -25,8 +21,15 @@ const LogIn = () => {
         keyboard={false}
         centered
       >
-        <Modal.Header closeButton className="image3"></Modal.Header>
-        <div className="image2">
+        <Modal.Header closeButton className="banner">
+          <img
+            alt="logo"
+            src="/img/logo.png"
+            height="20px"
+            className="d-block m-0 p-0"
+          />
+        </Modal.Header>
+        <div className="b-black">
           <Modal.Body>
             <LogInForm />
           </Modal.Body>

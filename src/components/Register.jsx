@@ -10,11 +10,7 @@ const Register = () => {
 
   return (
     <>
-      <Link
-        className="f-yellow"
-        onClick={() => setShow(true)}
-        style={{ textDecoration: "inherit" }}
-      >
+      <Link className="f-yellow links" onClick={() => setShow(true)}>
         REGISTRO
       </Link>
       <Modal
@@ -24,7 +20,7 @@ const Register = () => {
         keyboard={false}
         centered
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="banner">
           <img
             alt="logo"
             src="/img/logo.png"
@@ -36,7 +32,6 @@ const Register = () => {
           <Modal.Body>
             <RegisterForm /> {/* COMPONENTE FORMULARIO REGISTRO */}
           </Modal.Body>
-          <p>¿YA estás registrado? haz click aquí</p>
         </div>
       </Modal>
     </>

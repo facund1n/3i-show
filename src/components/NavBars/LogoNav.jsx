@@ -12,7 +12,7 @@ import { Container, Navbar } from "react-bootstrap";
 
 function LogoNav() {
   return (
-    <Navbar expand="lg" className="image">
+    <Navbar expand="lg" className="image3">
       <Container>
         <Navbar.Brand className="ms-auto">
           <img
