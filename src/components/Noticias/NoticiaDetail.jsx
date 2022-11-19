@@ -9,20 +9,27 @@ const NoticiaDetail = ({ data }) => {
   return (
     <>
       <StickyNav />
-      <Container>
-        <div>
-          <h1>{data.title}</h1>
-          <h2>{data.description}</h2>
+      <Container className="b-black">
+        <br />
+        <div className="text-center">
+          <div className="image3 py-4">
+            <h1>{data.title}</h1>
+          </div>
+          <br />
           <img
             className="img-fluid mb-2"
             style={{ height: "100%", width: "100%" }}
             src={data.imageLg}
             alt={data.altLg}
           />
-          <Container>
-            <article className="text-justify">{data.descriptionFull}</article>
-          </Container>
+          <br />
         </div>
+        <Container>
+          <hr />
+          <h3>{data.description}</h3>
+          <article className="font-roboto">{data.descriptionFull}</article>
+        </Container>
+        <br />
       </Container>
       {/* AGREGAR COMENT BOX */}
       <CommentBox />

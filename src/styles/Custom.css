@@ -1,20 +1,41 @@
 /* Paleta de colores:
-#000000 #121212 #F5c518 #FFFFFF */
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+#000000 #121212 #f5c518 #FFFFFF */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Raleway&family=Roboto+Condensed:wght@700&family=Slabo+27px&display=swap");
 * {
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: large;
+}
+
+.font-raleway {
+  font-family: "Raleway Condensed", sans-serif;
+}
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.links:hover {
+  text-decoration: none;
+  font-family: "Roboto condensed", sans-serif;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 3px #f5c518;
+  color: black;
+  transition: 0.3s;
 }
 
 .image {
-  background-image: url(https://www.heavyblogisheavy.com/content/images/2022/10/hbih-doomsday.png);
+  background-image: url(https://tinypic.host/images/2022/11/19/Proyecto-nuevo-5.png);
 }
 .image2 {
-  background-image: url(https://tinypic.host/images/2022/11/18/image244aaf25078826899.png);
+  background-image: url(https://tinypic.host/images/2022/11/19/Proyecto-nuevo-2.png);
 }
 .image3 {
-  background-image: url(https://tinypic.host/images/2022/11/18/imagemodal.png);
-  min-width: 100%;
+  background-image: url(https://tinypic.host/images/2022/11/19/calaveritas.jpg);
+}
+.banner {
+  background-image: url(https://tinypic.host/images/2022/11/19/Proyecto-nuevo-6.png);
 }
 
 .b-black {
@@ -28,6 +49,17 @@
 }
 .b-white {
   background-color: #ffffff;
+}
+
+.border-yellow {
+  background-image: linear-gradient(to bottom, #000, #121212);
+  border: solid;
+  box-shadow: 0 0 0 1px #ffffff60;
+  margin: 0px;
+}
+
+.border-black {
+  filter: drop-shadow(-3px 3px #000000);
 }
 
 .f-black {
@@ -48,5 +80,5 @@
 }
 
 .gradient1 {
-  background-image: linear-gradient(to top, #2e2e2e, transparent);
+  background-image: linear-gradient(to bottom, transparent, #ffffff25);
 }

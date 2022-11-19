@@ -26,11 +26,11 @@ function StickyNav() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto align-items-center">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/#destacadoIndex">Destacados</Nav.Link>
-            <Nav.Link href="/#noticiasIndex">Noticias</Nav.Link>
-            <Nav.Link href="/#showsIndex">Shows</Nav.Link>
-            <Nav.Link href="#">Fotos</Nav.Link>
+            <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/#destacadoIndex">DESTACADOS</Nav.Link>
+            <Nav.Link href="/#noticiasIndex">NOTICIAS</Nav.Link>
+            <Nav.Link href="/#showsIndex">SHOWS</Nav.Link>
+            <Nav.Link href="#">FOTOS</Nav.Link>
             {/* ME GUSTA? PREGUNTAR*/}
             <Social /> {/* COMPONENTE SOCIAL */}
           </Nav>
