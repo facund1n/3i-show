@@ -26,7 +26,7 @@ const LogInForm = () => {
   });
   return (
     <Form onSubmit={formik.handleSubmit}>
-      <span>Iniciar sesión:</span>
+      <span>LOGIN</span>
       <hr />
       <Form.Group className="mb-3">
         <Form.Label>E-mail:</Form.Label>
