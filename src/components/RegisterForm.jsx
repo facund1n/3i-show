@@ -36,7 +36,7 @@ function RegisterForm() {
   });
   return (
     <Form onSubmit={formik.handleSubmit}>
-      <span>Iniciar sesión:</span>
+      <span>REGISTRO</span>
       <hr />
       <Form.Group className="mb-3">
         <Form.Label>Usuario:</Form.Label>
