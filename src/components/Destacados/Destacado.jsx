@@ -10,11 +10,11 @@ const Destacado = ({ destacado }) => {
         to={`destacados/${destacado._id}`}
         style={{ textDecoration: "inherit" }}
       >
-        <Card className="mb-2 border-yellow links">
+        <Card className="mb-2 bg-dark links">
           <div>
             <Card.Img
               variant="top"
-              style={{ height: "200px" }}
+              style={{ height: "190px" }}
               src={destacado.imageSm}
               alt={destacado.altSm}
             />

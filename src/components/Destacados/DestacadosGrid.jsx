@@ -12,7 +12,7 @@ const DestacadosMapGrid = ({ data }) => {
       <CardGroup>
         <Row xs={2} md={4} lg={5}>
           {data.map((destacado, i) => (
-            <Col sm={4} key={i}>
+            <Col key={i}>
               <Destacado destacado={destacado} />
             </Col>
           ))}

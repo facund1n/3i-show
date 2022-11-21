@@ -1,4 +1,4 @@
-import { CardGroup, Col, Container, Row } from "react-bootstrap";
+import { CardGroup, Col, Container } from "react-bootstrap";
 import Show from "./Show"; // Componente
 
 // 2
@@ -10,13 +10,13 @@ const DestacadosMapGrid = ({ data }) => {
         | Shows
       </h1>
       <CardGroup>
-        <Row xs={2} md={4} lg={5}>
+        <Col>
           {data.map((show, i) => (
-            <Col sm={4} key={i}>
+            <div key={i}>
               <Show show={show} />
-            </Col>
+            </div>
           ))}
-        </Row>
+        </Col>
       </CardGroup>
     </Container>
   );
