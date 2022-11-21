@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // 3
@@ -7,24 +7,26 @@ const Show = ({ show }) => {
   return (
     <>
       <Link to={`shows/${show._id}`} style={{ textDecoration: "inherit" }}>
-        <Card className="mb-2 border-yellow links">
-          <div style={{ height: "50%" }} variant="dark">
-            <Card.Img
-              variant="top"
-              style={{ height: "230px" }}
-              src={show.imageSm}
-              alt={show.altSm}
-            />
-          </div>
-
-          <div
-            className="mt-2 text-center d-flex align-items-center"
-            style={{ height: "200px" }}
-          >
-            <h4>{show.title}</h4>
-            {/* <article>{show.description}</article> */}
-          </div>
-        </Card>
+        <Container>
+          {" "}
+          <Card className="bg-dark links mb-2">
+            <Row>
+              <Col>
+                <Card.Img
+                  className="img-fluid"
+                  /* variant="top" */
+                  style={{ height: "250px" }}
+                  src={show.imageLg}
+                  alt={show.altSm}
+                />
+              </Col>
+              <Col className="d-flex justify-content-center align-items-center">
+                <h1>{show.title}</h1>
+                {/* <article>{show.description}</article> */}
+              </Col>
+            </Row>
+          </Card>
+        </Container>
       </Link>
     </>
   );

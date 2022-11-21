@@ -3,7 +3,7 @@ import Noticia from "./Noticia"; // Componente
 
 // 2
 
-const DestacadosMapGrid = ({ data }) => {
+const NoticiasGrid = ({ data }) => {
   return (
     <Container>
       <h1 className="f-yellow image" id="noticiasIndex">
@@ -22,4 +22,4 @@ const DestacadosMapGrid = ({ data }) => {
   );
 };
 
-export default DestacadosMapGrid;
+export default NoticiasGrid;
