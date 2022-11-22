@@ -30,7 +30,7 @@ function StickyNav() {
             <Nav.Link href="/#destacadoIndex">DESTACADOS</Nav.Link>
             <Nav.Link href="/#noticiasIndex">NOTICIAS</Nav.Link>
             <Nav.Link href="/#showsIndex">SHOWS</Nav.Link>
-            <Nav.Link href="#">FOTOS</Nav.Link>
+            <Nav.Link href="/#fotosIndex">FOTOS</Nav.Link>
             {/* ME GUSTA? PREGUNTAR*/}
             <Social /> {/* COMPONENTE SOCIAL */}
           </Nav>
