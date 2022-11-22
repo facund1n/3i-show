@@ -30,7 +30,6 @@ const Main = () => {
         <NoticiasMap />
         <GalleryMap />
         <ShowsMap />
-
         <Footer />
       </Container>
     </>
