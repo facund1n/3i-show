@@ -1,7 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
-import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import * as Yup from "yup";
 
 function RegisterForm() {
   const formik = useFormik({
@@ -35,8 +35,8 @@ function RegisterForm() {
     },
   });
   return (
-    <Form onSubmit={formik.handleSubmit}>
-      <span>REGISTRO</span>
+    <Form onSubmit={formik.handleSubmit} className="py-2">
+      <h3>REGISTRO</h3>
       <hr />
       <Form.Group className="mb-3">
         <Form.Label>Usuario:</Form.Label>
@@ -107,7 +107,7 @@ function RegisterForm() {
         </Button>
       </div>
       <hr />
-      <Link className="f-yellow">
+      <Link to="/login" className="f-yellow">
         <span className="f-yellow">¿YA estás registrado? dame click !</span>
       </Link>
     </Form>

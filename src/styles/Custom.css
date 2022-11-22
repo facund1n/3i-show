@@ -1,12 +1,17 @@
 /* Paleta de colores:
 #000000 #121212 #f5c518 #FFFFFF */
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Raleway&family=Roboto+Condensed:wght@700&family=Slabo+27px&display=swap");
+
 * {
   color: #ffffff;
   font-family: "Roboto Condensed", sans-serif;
   font-size: large;
 }
-
+body {
+  cursor: url("https://tinypic.host/images/2022/11/22/Proyecto-nuevo-10.png"),
+    auto;
+  height: 100vh;
+}
 .font-raleway {
   font-family: "Raleway Condensed", sans-serif;
 }
@@ -15,7 +20,6 @@
   font-size: 22px;
   text-align: justify;
 }
-
 .image {
   background-image: url(https://tinypic.host/images/2022/11/19/Proyecto-nuevo-5.png);
 }
@@ -28,7 +32,6 @@
 .banner {
   background-image: url(https://tinypic.host/images/2022/11/19/Proyecto-nuevo-6.png);
 }
-
 .b-black {
   background-color: #000000;
 }
@@ -41,11 +44,9 @@
 .b-white {
   background-color: #ffffff;
 }
-
 .border-black {
   filter: drop-shadow(0px 3px #000000);
 }
-
 .fade-black {
   background-image: linear-gradient(
     to right,
@@ -54,7 +55,6 @@
     #000000 85%
   );
 }
-
 .links:hover {
   text-decoration: none;
   font-family: "Roboto condensed", sans-serif;
@@ -65,7 +65,6 @@
   color: black;
   transition: 0.2s;
 }
-
 .f-black {
   color: #000000;
   text-decoration: inherit;
@@ -82,7 +81,6 @@
   color: #ffffff;
   text-decoration: inherit;
 }
-
 .gradient1 {
   background-image: linear-gradient(to bottom, transparent, #ffffff25);
 }

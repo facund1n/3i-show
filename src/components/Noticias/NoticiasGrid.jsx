@@ -10,7 +10,7 @@ const NoticiasGrid = ({ data }) => {
         | Noticias
       </h1>
       <CardGroup>
-        <Row xs={1} md={2} lg={2}>
+        <Row xs={1} md={2} lg={3}>
           {data.map((noticia, i) => (
             <Col key={i}>
               <Noticia noticia={noticia} />

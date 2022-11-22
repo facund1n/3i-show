@@ -11,7 +11,6 @@ import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 
 const imagenes = JSON.parse(localStorage.getItem("images"));
-console.log(imagenes);
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -84,7 +83,7 @@ export default class CustomArrows extends Component {
 
     return (
       <Container className="b-grey">
-        <h1 className="f-yellow image" id="showsIndex">
+        <h1 className="f-yellow image" id="fotosIndex">
           | Fotos
         </h1>
         <Slider {...settings}>
