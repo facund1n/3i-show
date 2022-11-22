@@ -1,8 +1,8 @@
 // cheacar estructura y desctructuring de https://github.com/a-bianchi/rolling-codeschool-comisionI2/blob/master/lessons/39/src/components/FormularioTurno.js
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
-import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import * as Yup from "yup";
 
 const LogInForm = () => {
   const formik = useFormik({
@@ -26,7 +26,7 @@ const LogInForm = () => {
   });
   return (
     <Form onSubmit={formik.handleSubmit}>
-      <span>LOGIN</span>
+      <h3>LOGIN</h3>
       <hr />
       <Form.Group className="mb-3">
         <Form.Label>E-mail:</Form.Label>
@@ -68,13 +68,13 @@ const LogInForm = () => {
         </Button>
       </div>
       <hr />
-      <Link className="f-yellow">
+      <Link to={"/register"} className="f-yellow">
         <span className="f-yellow">
           NO estás registrado aún? haz click aquí
         </span>
       </Link>
       <br />
-      <Link className="f-yellow">
+      <Link to={""} className="f-yellow">
         <span className="f-yellow">Olvidaste contraseña?</span>
       </Link>
     </Form>

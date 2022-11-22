@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import LogInForm from "./LogInForm";
+import LogInForm from "./Forms/LogInForm";
 
 const LogIn = () => {
   const [show, setShow] = useState(false);

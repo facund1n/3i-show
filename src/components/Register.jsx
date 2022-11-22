@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import RegisterForm from "./RegisterForm";
+import RegisterForm from "./Forms/RegisterForm";
 
 const Register = () => {
   const [show, setShow] = useState(false);
