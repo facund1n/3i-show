@@ -29,8 +29,8 @@ function StickyNav() {
             <Nav.Link href="/">HOME</Nav.Link>
             <Nav.Link href="/#destacadoIndex">DESTACADOS</Nav.Link>
             <Nav.Link href="/#noticiasIndex">NOTICIAS</Nav.Link>
-            <Nav.Link href="/#showsIndex">SHOWS</Nav.Link>
             <Nav.Link href="/#fotosIndex">FOTOS</Nav.Link>
+            <Nav.Link href="/#showsIndex">SHOWS</Nav.Link>
             {/* ME GUSTA? PREGUNTAR*/}
             <Social /> {/* COMPONENTE SOCIAL */}
           </Nav>
