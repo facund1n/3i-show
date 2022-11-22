@@ -15,9 +15,10 @@ const GalleryMap = () => {
       .then((json) => setImages(json))
       .then(localStorage.setItem("images", JSON.stringify(images)))
       .finally(() => setIsLoading(false));
-  }, [images]);
+    console.log(images); // eslint-disable-next-line
+  }, [isLoading]);
 
-  return <>{isLoading ? <Loader /> : <GallerySlider />}</>;
+  return <>{isLoading ? <Loader /> : <GallerySlider images={images} />}</>;
 };
 
 export default GalleryMap;
