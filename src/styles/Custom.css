@@ -4,8 +4,9 @@
 
 * {
   color: #ffffff;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: large;
+  font-family: "Raleway Condensed", sans-serif;
+  font-weight: bold;
+  font-size: medium;
 }
 body {
   cursor: url("https://tinypic.host/images/2022/11/22/Proyecto-nuevo-10.png"),
@@ -19,6 +20,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   text-align: justify;
+}
+.main-background {
+  border: 1px solid #888888 !important;
+  border-radius: 10px;
 }
 .image {
   background-image: url(https://tinypic.host/images/2022/11/19/Proyecto-nuevo-5.png);
@@ -35,31 +40,40 @@ body {
 .b-black {
   background-color: #000000;
 }
+.b-black2 {
+  background-color: #00000070;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 50%;
+  border: solid 1px #ffffff2f;
+  border-radius: 8px;
+}
 .b-grey {
   background-color: #121212;
 }
 .b-yellow {
   background-color: #f5c518;
 }
+.b-yellow2 {
+  background-color: #f5c51810;
+  filter: contrast(1.5);
+}
 .b-white {
   background-color: #ffffff;
 }
 .border-black {
-  filter: drop-shadow(0px 3px #000000);
+  filter: drop-shadow(5px 5px 12px #000000);
 }
-.fade-black {
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    #f5c5184b,
-    #000000 85%
-  );
+.fade-yellow {
+  background-image: linear-gradient(transparent, #00000075);
+  border: 1px solid #f5c518 !important;
+  text-align: center;
+  display: grid;
 }
+
 .links:hover {
   text-decoration: none;
-  font-family: "Roboto condensed", sans-serif;
-  text-align: center;
-  justify-content: center;
   background-color: #f5c518;
   box-shadow: 0px 0px 5px 2px #f5c518;
   color: black;

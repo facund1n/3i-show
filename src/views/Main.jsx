@@ -6,10 +6,11 @@ import LogIn from "../components/LogIn";
 import Register from "../components/Register";
 import Welcome from "../components/Welcome";
 
-import DestacadosMap from "../components/Destacados/DestacadosMap";
+/* import DestacadosMap from "../components/Destacados/DestacadosMap"; */
 import NoticiasMap from "../components/Noticias/NoticiasMap";
 import ShowsMap from "../components/Shows/ShowsMap";
 import GalleryMap from "../components/Gallery/GalleryMap";
+import SliderMap from "../components/Slider/SliderMap";
 
 import { Container } from "react-bootstrap";
 
@@ -18,19 +19,22 @@ const Main = () => {
     <>
       <LogoNav />
       <StickyNav />
-      <Container className="px-0 d-flex flex-column min-vh-100">
-        <Container className="d-flex justify-content-end my-2">
-          <LogIn />
-          <Register />
+      <Container>
+        <Container className="px-0 d-flex flex-column min-vh-100">
+          <Container className="d-flex justify-content-end mt-1">
+            <LogIn />
+            <Register />
+          </Container>
+          <div className="image3 main-background my-1">
+            <Welcome />
+            <SliderMap />
+            {/* <DestacadosMap /> */}
+            <NoticiasMap />
+            <GalleryMap />
+            <ShowsMap />
+            <Footer />
+          </div>
         </Container>
-        <Welcome />
-        <Container />
-        <Container />
-        <DestacadosMap />
-        <NoticiasMap />
-        <GalleryMap />
-        <ShowsMap />
-        <Footer />
       </Container>
     </>
   );

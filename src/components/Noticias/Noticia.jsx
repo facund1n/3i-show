@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // 3
@@ -10,22 +10,26 @@ const Noticia = ({ noticia }) => {
         to={`noticias/${noticia._id}`}
         style={{ textDecoration: "inherit" }}
       >
-        <Card
-          className="bg-dark border-yellow links mb-2"
+        <Figure
+          className="bg-dark border-yellow links p-1"
           style={{ height: "95%" }}
         >
-          <Card.Img
+          <Figure.Image
+            className="img-fluid"
+            style={{ height: "70%" }}
+            width={600}
+            height={600}
             src={noticia.imageLg}
             alt={noticia.altLg}
-            style={{ height: "100%" }}
           />
-          <Card.ImgOverlay className="text-end align-self-end">
-            <div className="fade-black ">
-              <Card.Title>{noticia.title}</Card.Title>
-              <Card.Text>{noticia.description}</Card.Text>
-            </div>
-          </Card.ImgOverlay>
-        </Card>
+          <Figure.Caption
+            as="h1"
+            className="text-white text-center"
+            style={{ height: "30%" }}
+          >
+            {noticia.title}
+          </Figure.Caption>
+        </Figure>
       </Link>
     </>
   );

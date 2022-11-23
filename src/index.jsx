@@ -9,7 +9,7 @@ import Rutas from "./Route/Rutas";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="b-black image2">
+    <div className="b-black">
       <Rutas />
     </div>
   </React.StrictMode>
