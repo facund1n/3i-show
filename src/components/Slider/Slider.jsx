@@ -1,10 +1,9 @@
 // LG laptop 1024 x5 ITEMS || MD? TABLET 768 x4 ITEMS || MOBILE 425 x2 ITEMS
 
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
-
-const imagenes = JSON.parse(localStorage.getItem("images"));
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -37,13 +36,13 @@ function SamplePrevArrow(props) {
     />
   );
 }
-
+const destacados = JSON.parse(localStorage.getItem("destacados"));
 export default class CustomArrows extends Component {
   render() {
     var settings = {
       infinite: false,
       speed: 300,
-      slidesToShow: 1,
+      slidesToShow: 5,
       slidesToScroll: 1,
       initialSlide: 0,
       nextArrow: <SampleNextArrow />,
@@ -52,7 +51,7 @@ export default class CustomArrows extends Component {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
             infinite: false,
             dots: false,
@@ -61,7 +60,7 @@ export default class CustomArrows extends Component {
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
           },
         },
@@ -78,20 +77,31 @@ export default class CustomArrows extends Component {
     return (
       <Container className="b-grey">
         <h1 className="f-yellow image" id="fotosIndex">
-          | Fotos
+          | Destacados
         </h1>
         <Slider {...settings}>
-          {!imagenes
+          {!destacados
             ? window.location.reload()
-            : imagenes.map((data, k) => (
-                <div key={k}>
-                  <img
-                    className="img-fluid mb-2 px-1"
-                    style={{ height: "100%", width: "100%" }}
-                    src={data.imageLg}
-                    alt={data.altLg}
-                  />
-                </div>
+            : destacados.map((data, k) => (
+                <Link
+                  to={`destacados/${data._id}`}
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <Card
+                    key={k}
+                    className="bg-dark m-1 links"
+                    style={{ height: "95%" }}
+                  >
+                    <Card.Img
+                      src={data.imageSm}
+                      alt={data.altLg}
+                      style={{ height: "240px", width: "100%" }}
+                    />
+                    <Card.ImgOverlay className="d-flex align-items-end">
+                      <Card.Title className="b-black2">{data.title}</Card.Title>
+                    </Card.ImgOverlay>
+                  </Card>
+                </Link>
               ))}
         </Slider>
       </Container>
