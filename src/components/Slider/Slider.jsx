@@ -76,7 +76,7 @@ export default class CustomArrows extends Component {
 
     return (
       <Container className="b-grey">
-        <h1 className="f-yellow image" id="fotosIndex">
+        <h1 className="f-yellow image" id="destacadosIndex">
           | Destacados
         </h1>
         <Slider {...settings}>
