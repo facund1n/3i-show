@@ -1,7 +1,8 @@
 import { Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
-import CommentBox from "../CommentBox";
+import CommentBox from "../Comments/CommentBox";
+import DestacadosComentarios from "../Comments/Comentarios";
 
 // 2.2
 
@@ -26,12 +27,14 @@ const DestacadoDetail = ({ data }) => {
         </div>
         <Container>
           <hr />
+
           <h3>{data.description}</h3>
           <article className="font-roboto">{data.descriptionFull}</article>
         </Container>
         <br />
-        {/* AGREGAR COMENT BOX */}
+
         <CommentBox />
+        {/*  <DestacadosComentarios /> */}
       </Container>
       <Footer />
     </>

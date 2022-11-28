@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
-import CommentBox from "../CommentBox";
+import CommentBox from "../Comments/CommentBox";
 
 // 2.2
 

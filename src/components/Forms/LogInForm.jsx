@@ -1,13 +1,19 @@
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
-import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import axios from "axios";
 import * as yup from "yup";
 import { FormSuccess, FormError } from "../Common";
+import { useSignIn } from "react-auth-kit";
+import Cookies from "js-cookie";
 
 const validationSchema = yup.object({
-  email: yup.string().email("Ingrese email válido").required("Requerido"),
+  name: yup
+    .string()
+    .min(2, "mínimo 2 carácteres")
+    .max(30, "máximo 30 carácteres")
+    .required("Requerido"),
   password: yup
     .string()
     .min(8, "mínimo 8 carácteres")
@@ -18,14 +24,11 @@ const validationSchema = yup.object({
 export default function RegisterForm() {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
-
-  const navigate = useNavigate();
+  const singIn = useSignIn(); // ecribe/lee cookies y las autentica
 
   const onSubmit = async (values) => {
-    const { ...data } = values;
-
     const response = await axios
-      .post("http://localhost:4000/users/login", data)
+      .post("http://localhost:4000/users/login", values)
       .catch((err) => {
         if (err) setError(err.response.data.message);
         setSuccess(null);
@@ -38,12 +41,21 @@ export default function RegisterForm() {
       setInterval(() => {
         window.location.reload();
       }, 3500);
+      singIn({
+        token: response.data.token,
+        expiresIn: 86400,
+        tokenType: "Bearer",
+        authState: { name: values.name },
+      });
+      Cookies.set("_userName", values.name);
+      localStorage.setItem("userName", values.name);
+      /* document.cookie = "_user=" + encodeURIComponent(values.name); */
     }
   };
 
   const formik = useFormik({
     initialValues: {
-      email: "",
+      name: "",
       password: "",
     },
     validateOnBlur: true,
@@ -53,24 +65,23 @@ export default function RegisterForm() {
 
   return (
     <Form onSubmit={formik.handleSubmit}>
-      {/* <ToastContainer /> */}
       <h3>LOGIN</h3>
       <hr />
       {!error && <FormSuccess>{success ? success : ""}</FormSuccess>}
       {!success && <FormError>{error ? error : ""}</FormError>}
       <Form.Group className="mb-3">
-        <Form.Label>E-mail:</Form.Label>
+        <Form.Label>Nombre:</Form.Label>
         <Form.Control
-          id="email"
-          name="email"
-          type="email"
-          placeholder="ejemplo@dominio.com"
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Jhon Doe"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.email}
+          value={formik.values.name}
         />
-        {formik.touched.email && formik.errors.email ? (
-          <div className="f-yellow mt-1">{formik.errors.email}</div>
+        {formik.touched.name && formik.errors.name ? (
+          <div className="f-yellow mt-1">{formik.errors.name}</div>
         ) : null}
       </Form.Group>
 

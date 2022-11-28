@@ -11,9 +11,9 @@ const DestacadosMapGrid = ({ data }) => {
       </h1>
       <CardGroup>
         <Row xs={2} md={4} lg={5}>
-          {data.map((destacado, i) => (
+          {data.map((data, i) => (
             <Col key={i}>
-              <Destacado destacado={destacado} />
+              <Destacado data={data} />
             </Col>
           ))}
         </Row>

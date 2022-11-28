@@ -1,7 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
-import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import axios from "axios";
 import * as yup from "yup";
 import { FormSuccess, FormError } from "../Common";
@@ -29,8 +29,6 @@ const validationSchema = yup.object({
 export default function RegisterForm() {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
-
-  const navigate = useNavigate();
 
   const onSubmit = async (values) => {
     const { ...data } = values;

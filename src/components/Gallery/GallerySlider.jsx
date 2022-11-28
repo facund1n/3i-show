@@ -83,8 +83,8 @@ export default class CustomArrows extends Component {
         <Slider {...settings}>
           {!imagenes
             ? window.location.reload()
-            : imagenes.map((data, k) => (
-                <div key={k}>
+            : imagenes.map((data, i) => (
+                <div key={i}>
                   <img
                     className="img-fluid mb-2 px-1"
                     style={{ height: "100%", width: "100%" }}
