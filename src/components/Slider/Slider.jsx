@@ -82,13 +82,14 @@ export default class CustomArrows extends Component {
         <Slider {...settings}>
           {!destacados
             ? window.location.reload()
-            : destacados.map((data, k) => (
+            : destacados.map((data, i) => (
                 <Link
+                  key={i}
                   to={`destacados/${data._id}`}
                   style={{ textDecoration: "inherit" }}
                 >
                   <Card
-                    key={k}
+                    key={i}
                     className="bg-dark m-1 links"
                     style={{ height: "95%" }}
                   >
