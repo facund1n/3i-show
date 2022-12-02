@@ -18,14 +18,8 @@ const Main = () => {
   const [auth, setAuth] = useState();
   const authState = Cookies.get("_auth_state");
 
-  console.log(auth);
-
   useEffect(() => {
-    if (!authState) {
-      setAuth(false);
-    } else {
-      setAuth(true);
-    }
+    !authState ? setAuth(false) : setAuth(true);
   }, [auth]);
 
   return (
