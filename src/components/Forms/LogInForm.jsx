@@ -7,6 +7,7 @@ import * as yup from "yup";
 import { FormSuccess, FormError } from "../Common";
 import { useSignIn } from "react-auth-kit";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
   name: yup
@@ -24,7 +25,8 @@ const validationSchema = yup.object({
 export default function RegisterForm() {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
-  const singIn = useSignIn(); // ecribe/lee cookies y las autentica
+  const singIn = useSignIn();
+  let navigate = useNavigate();
 
   const onSubmit = async (values) => {
     const response = await axios
@@ -39,6 +41,7 @@ export default function RegisterForm() {
       setSuccess(response.data.message);
       formik.resetForm();
       setInterval(() => {
+        navigate("/");
         window.location.reload();
       }, 3500);
       singIn({
@@ -49,7 +52,6 @@ export default function RegisterForm() {
       });
       Cookies.set("_userName", values.name);
       localStorage.setItem("userName", values.name);
-      /* document.cookie = "_user=" + encodeURIComponent(values.name); */
     }
   };
 

@@ -6,28 +6,32 @@ import { Link } from "react-router-dom";
 const Show = ({ show }) => {
   return (
     <>
-      <Link to={`shows/${show._id}`} style={{ textDecoration: "inherit" }}>
-        <Container>
-          {" "}
-          <Card className="bg-dark links mb-2">
-            <Row>
-              <Col>
-                <Card.Img
-                  className="img-fluid"
-                  /* variant="top" */
-                  style={{ height: "250px" }}
-                  src={show.imageLg}
-                  alt={show.altSm}
-                />
-              </Col>
-              <Col className="d-flex justify-content-center align-items-center">
-                <h1>{show.title}</h1>
-                {/* <article>{show.description}</article> */}
-              </Col>
-            </Row>
-          </Card>
-        </Container>
-      </Link>
+      {/* <Link to={`shows/${show._id}`} style={{ textDecoration: "inherit" }}> */}
+      <Container>
+        <Card className="bg-dark mb-2">
+          <Row>
+            <Col>
+              <Card.Img
+                className="img-fluid"
+                style={{ height: "250px" }}
+                src={show.imageLg}
+                alt={show.altSm}
+              />
+            </Col>
+            <Col className="align-self-center">
+              <h1>{show.title}</h1>
+              <article>{show.description}</article>
+              <span>
+                Tickets en:{" "}
+                <a href={show.ticketsUrl} className="f-yellow">
+                  {show.ticketsUrl}
+                </a>
+              </span>
+            </Col>
+          </Row>
+        </Card>
+      </Container>
+      {/* </Link> */}
     </>
   );
 };
