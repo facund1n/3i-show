@@ -5,6 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import * as yup from "yup";
 import { FormSuccess, FormError } from "../Common";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
   name: yup
@@ -29,6 +30,7 @@ const validationSchema = yup.object({
 export default function RegisterForm() {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
+  let navigate = useNavigate();
 
   const onSubmit = async (values) => {
     const { ...data } = values;
@@ -45,7 +47,7 @@ export default function RegisterForm() {
       setSuccess(response.data.message);
       formik.resetForm();
       setInterval(() => {
-        window.location.reload();
+        navigate("/");
       }, 3500);
     }
   };
