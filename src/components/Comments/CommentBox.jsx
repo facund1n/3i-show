@@ -1,4 +1,4 @@
-import { Container, InputGroup, Form, Button } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 import { useFormik } from "formik";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -57,16 +57,18 @@ export default function CommentBox() {
         {formik.touched.comment && formik.errors.comment ? (
           <div className="f-yellow mt-1">{formik.errors.comment}</div>
         ) : null}
-        <InputGroup size="lg">
+        <Form.Group size="lg">
           <Form.Control
             id="comment"
             name="comment"
+            as="textarea"
+            rows={3}
             className="py-2 my-2"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.comment}
           />
-        </InputGroup>
+        </Form.Group>
         <div className="d-flex justify-content-end">
           <Button className="btn-lg" variant="warning" type="submit">
             Comentar
