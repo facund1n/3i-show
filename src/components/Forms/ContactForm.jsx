@@ -1,12 +1,11 @@
 import { Button, Form } from "react-bootstrap";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+
 import { useState } from "react";
 import axios from "axios";
 import * as yup from "yup";
 import { FormSuccess, FormError } from "../Common";
 import { useSignIn } from "react-auth-kit";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
@@ -30,30 +29,7 @@ export default function RegisterForm() {
   const navigate = useNavigate();
 
   const onSubmit = async (values) => {
-    const response = await axios
-      .post("http://localhost:4000/users/login", values)
-      .catch((err) => {
-        if (err) setError(err.response.data.message);
-        setSuccess(null);
-        console.log("Error?", err.response.data.message);
-      });
-    if (response) {
-      setError(null);
-      setSuccess(response.data.message);
-      formik.resetForm();
-      setInterval(() => {
-        navigate("/");
-        window.location.reload();
-      }, 3500);
-      singIn({
-        token: response.data.token,
-        expiresIn: 86400,
-        tokenType: "Bearer",
-        authState: { name: values.name },
-      });
-      Cookies.set("_userName", values.name);
-      localStorage.setItem("userName", values.name);
-    }
+    const response = await axios;
   };
 
   const formik = useFormik({
