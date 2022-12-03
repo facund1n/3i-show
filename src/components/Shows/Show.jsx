@@ -1,5 +1,5 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; */
 
 // 3
 
@@ -9,24 +9,21 @@ const Show = ({ show }) => {
       {/* <Link to={`shows/${show._id}`} style={{ textDecoration: "inherit" }}> */}
       <Container>
         <Card className="bg-dark mb-2">
-          <Row>
+          <Row sm={2} md={2} lg={2}>
             <Col>
-              <Card.Img
-                className="img-fluid"
-                style={{ height: "250px" }}
-                src={show.imageLg}
-                alt={show.altSm}
-              />
+              <Card.Img className="w-100" src={show.imageLg} alt={show.altSm} />
             </Col>
-            <Col className="align-self-center">
-              <h1>{show.title}</h1>
-              <article>{show.description}</article>
-              <span>
-                Tickets en:{" "}
-                <a href={show.ticketsUrl} className="f-yellow">
-                  {show.ticketsUrl}
-                </a>
-              </span>
+            <Col>
+              <div className="flex-column text-center align-self-center">
+                <h1>{show.title}</h1>
+                <article>{show.description}</article>
+                <span>
+                  Tickets en:{" "}
+                  <a href={show.ticketsUrl} className="f-yellow">
+                    {show.ticketsUrl}
+                  </a>
+                </span>
+              </div>
             </Col>
           </Row>
         </Card>
