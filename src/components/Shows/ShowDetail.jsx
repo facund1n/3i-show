@@ -11,7 +11,7 @@ const ShowDetail = ({ data }) => {
       <StickyNav />
       <Container className="b-black">
         <br />
-        <div className="text-center ">
+        <div className="text-center">
           <div className="image3 py-4">
             <h1>{data.title}</h1>
           </div>

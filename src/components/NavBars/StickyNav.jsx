@@ -31,8 +31,8 @@ function StickyNav() {
             <Nav.Link href="/#noticiasIndex">NOTICIAS</Nav.Link>
             <Nav.Link href="/#fotosIndex">FOTOS</Nav.Link>
             <Nav.Link href="/#showsIndex">SHOWS</Nav.Link>
-            {/* ME GUSTA? PREGUNTAR*/}
-            <Social /> {/* COMPONENTE SOCIAL */}
+            <Nav.Link href="/contacto">CONTACTO</Nav.Link>
+            <Social /> {/* redes sociales */}
           </Nav>
           <Form className="d-flex">
             <Form.Control
