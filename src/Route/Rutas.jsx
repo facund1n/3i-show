@@ -8,6 +8,7 @@ import ShowDetailMap from "../components/Shows/ShowDetailMap";
 import CommentBox from "../components/Comments/CommentBox";
 import Register from "../views/Register";
 import Login from "../views/Login";
+import Contact from "../views/Contact";
 
 const Rutas = () => {
   return (
@@ -21,6 +22,7 @@ const Rutas = () => {
         <Route path={"/login"} element={<Login />} />
         <Route path={"/register"} element={<Register />} />
         <Route path={"/commentbox"} element={<CommentBox />} />
+        <Route path={"/contacto"} element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
