@@ -50,8 +50,6 @@ export default function RegisterForm() {
         tokenType: "Bearer",
         authState: { name: values.name },
       });
-      Cookies.set("_userName", values.name);
-      localStorage.setItem("userName", values.name);
     }
   };
 
