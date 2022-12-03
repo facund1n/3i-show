@@ -1,26 +1,22 @@
 import { useSignOut } from "react-auth-kit";
 import Cookies from "js-cookie";
-import { useState, useEffect } from "react";
 
 const LogOut = () => {
   const signOut = useSignOut();
-  const [userName, setUserName] = useState("");
-  const getUserName = Cookies.get("_userName");
 
-  useEffect(() => {
-    getUserName ? setUserName(getUserName) : setUserName("");
-  }, []);
-
+  const getUserName = Cookies.get("_auth_state");
+  const userNoRegExp = getUserName.replace(/[^a-zA-Z 0-9.]+/g, " ");
+  const userCleaned = userNoRegExp.slice(6);
   return (
-    <>
-      <span>Bienvenido/a: {userName} |</span>
+    <div className="text-end">
+      <span>Bienvenido/a: {userCleaned}</span>
       <div
         className="f-yellow mx-1 links"
         onClick={() => signOut().finally(window.location.reload())}
       >
         CERRAR SESION
       </div>
-    </>
+    </div>
   );
 };
 export default LogOut;
