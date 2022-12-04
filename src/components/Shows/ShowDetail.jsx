@@ -19,15 +19,15 @@ const ShowDetail = ({ data }) => {
           <img
             className="img-fluid mb-2 px-4" // se coloca padding por tamaño de img
             style={{ height: "100%", width: "100%" }}
-            src={data.imageLg}
-            alt={data.altLg}
+            src={data.image}
+            alt={data.alt}
           />
         </div>
         <br />
         <Container>
           <hr />
           <h3>{data.description}</h3>
-          <article className="font-roboto">{data.descriptionFull}</article>
+          <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
       </Container>
