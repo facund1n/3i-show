@@ -12,7 +12,7 @@ const NoticiaMap = () => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/noticias/${params.id}`)
+    fetch(`http://localhost:4000/articulos/noticias/${params.id}`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));
