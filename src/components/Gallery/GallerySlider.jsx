@@ -77,9 +77,6 @@ export default class CustomArrows extends Component {
 
     return (
       <Container className="b-grey">
-        <h1 className="f-yellow image" id="fotosIndex">
-          | Fotos
-        </h1>
         <Slider {...settings}>
           {!imagenes
             ? window.location.reload()
