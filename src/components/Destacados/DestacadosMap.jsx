@@ -3,14 +3,14 @@ import Loader from "../Loader";
 
 import DestacadosGrid from "./DestacadosGrid";
 
-// consumo API - destacados 1
+// 1.1
 
 const DestacadosMap = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("http://localhost:4000/destacados/all")
+    fetch("http://localhost:4000/articulos/destacados/")
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));

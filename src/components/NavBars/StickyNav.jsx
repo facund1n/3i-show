@@ -8,7 +8,8 @@ Icono de Contacto (icono a la derecha) que nos va a llevar al formulario de cont
 Mobile:
     - logo + menú hamburguesa ( con buscador ) (referencia página la gaceta) */
 
-import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, Form, Nav, Navbar } from "react-bootstrap";
+import SearchInput from "../SearchInput";
 import Social from "../Social";
 
 function StickyNav() {
@@ -35,13 +36,9 @@ function StickyNav() {
             <Social /> {/* redes sociales */}
           </Nav>
           <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Escribe algo..."
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-warning">🔎</Button>
+            <SearchInput />
+            {/* AGREGAR COMPONENTE DE BOTON DE BÚSQUEDA
+             */}
           </Form>
         </Navbar.Collapse>
       </Container>

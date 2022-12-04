@@ -10,7 +10,7 @@ const ShowsMap = () => {
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("http://localhost:4000/shows/all")
+    fetch("http://localhost:4000/articulos/shows/")
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));

@@ -1,19 +1,22 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// 2
+// 1.3
 
 const Destacado = ({ data }) => {
   return (
     <>
-      <Link to={`destacados/${data._id}`} style={{ textDecoration: "inherit" }}>
-        <Card className="mb-2 bg-dark links">
+      <Link
+        to={`/articulos/destacados/${data._id}`}
+        style={{ textDecoration: "inherit" }}
+      >
+        <Card className="mb-2 bg-dark links" border="black">
           <div>
             <Card.Img
               variant="top"
               style={{ height: "190px" }}
-              src={data.imageSm}
-              alt={data.altSm}
+              src={data.image}
+              alt={data.alt}
             />
           </div>
           <div

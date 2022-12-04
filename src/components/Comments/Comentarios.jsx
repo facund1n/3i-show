@@ -6,9 +6,6 @@ const DestacadosComentarios = ({ data }) => {
       {data.map((comentario, i) => (
         <div>{comentario.body}</div>
       ))}
-      <hr />
-
-      <hr />
     </>
   );
 };

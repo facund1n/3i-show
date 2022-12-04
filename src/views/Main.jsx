@@ -8,7 +8,7 @@ import Welcome from "../components/Welcome";
 import NoticiasMap from "../components/Noticias/NoticiasMap";
 import ShowsMap from "../components/Shows/ShowsMap";
 import GalleryMap from "../components/Gallery/GalleryMap";
-import SliderMap from "../components/Slider/SliderMap";
+import DestacadosMap from "../components/Destacados/DestacadosMap";
 import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 
@@ -42,9 +42,21 @@ const Main = () => {
           </Container>
           <div className="image3 main-background my-1">
             <Welcome />
-            <SliderMap />
+            <h1 className="f-yellow image my-3 mx-2" id="showsIndex">
+              | Destacados
+            </h1>
+            <DestacadosMap />
+            <h1 className="f-yellow image my-3 mx-2" id="showsIndex">
+              | Noticias
+            </h1>
             <NoticiasMap />
+            <h1 className="f-yellow image my-3 mx-2" id="showsIndex">
+              | Fotos
+            </h1>
             <GalleryMap />
+            <h1 className="f-yellow image my-3 mx-2" id="showsIndex">
+              | Shows
+            </h1>
             <ShowsMap />
             <Footer />
           </div>

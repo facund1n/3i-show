@@ -59,7 +59,7 @@ const LogInForm = () => {
     <>
       <ToastContainer />
       <h2>Iniciar Sesión</h2>
-      <hr></hr>
+      <hr />
       <Form className="mx-auto">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>

@@ -37,6 +37,7 @@ function SamplePrevArrow(props) {
   );
 }
 const destacados = JSON.parse(localStorage.getItem("destacados"));
+
 export default class CustomArrows extends Component {
   render() {
     var settings = {
@@ -76,16 +77,13 @@ export default class CustomArrows extends Component {
 
     return (
       <Container className="b-grey">
-        <h1 className="f-yellow image" id="destacadosIndex">
-          | Destacados
-        </h1>
         <Slider {...settings}>
           {!destacados
             ? window.location.reload()
             : destacados.map((data, i) => (
                 <Link
                   key={i}
-                  to={`destacados/${data._id}`}
+                  to={`articulos/destacados/${data._id}`}
                   style={{ textDecoration: "inherit" }}
                 >
                   <Card
@@ -94,8 +92,8 @@ export default class CustomArrows extends Component {
                     style={{ height: "95%" }}
                   >
                     <Card.Img
-                      src={data.imageSm}
-                      alt={data.altLg}
+                      src={data.image}
+                      alt={data.alt}
                       style={{ height: "240px", width: "100%" }}
                     />
                     <Card.ImgOverlay className="d-flex align-items-end">

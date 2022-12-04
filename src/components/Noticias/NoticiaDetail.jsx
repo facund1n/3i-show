@@ -19,15 +19,16 @@ const NoticiaDetail = ({ data }) => {
           <img
             className="img-fluid mb-2"
             style={{ height: "100%", width: "100%" }}
-            src={data.imageLg}
-            alt={data.altLg}
+            src={data.image}
+            alt={data.alt}
           />
           <br />
         </div>
         <Container>
           <hr />
+          <h1>{data.subtitle}</h1>
           <h3>{data.description}</h3>
-          <article className="font-roboto">{data.descriptionFull}</article>
+          <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
       </Container>

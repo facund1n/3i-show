@@ -5,7 +5,7 @@
 * {
   color: #ffffff;
   font-family: "Raleway Condensed", sans-serif;
-  font-weight: bold;
+  font-weight: 450;
   font-size: medium;
 }
 body {
@@ -96,5 +96,5 @@ body {
   text-decoration: inherit;
 }
 .gradient1 {
-  background-image: linear-gradient(to bottom, transparent, #ffffff25);
+  background-image: linear-gradient(to bottom, transparent, #000000);
 }

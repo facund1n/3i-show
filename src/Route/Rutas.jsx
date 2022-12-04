@@ -9,6 +9,7 @@ import CommentBox from "../components/Comments/CommentBox";
 import Register from "../views/Register";
 import Login from "../views/Login";
 import Contact from "../views/Contact";
+import SearchResults from "../components/SearchResults";
 
 const Rutas = () => {
   return (
@@ -16,13 +17,20 @@ const Rutas = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path={"/destacados/:id"} element={<DestacadoDetailMap />} />
-        <Route path={"/noticias/:id"} element={<NoticiaDetailMap />} />
-        <Route path={"/shows/:id"} element={<ShowDetailMap />} />
+        <Route
+          path={"/articulos/destacados/:id"}
+          element={<DestacadoDetailMap />}
+        />
+        <Route
+          path={"/articulos/noticias/:id"}
+          element={<NoticiaDetailMap />}
+        />
+        <Route path={"/articulos/shows/:id"} element={<ShowDetailMap />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/register"} element={<Register />} />
         <Route path={"/commentbox"} element={<CommentBox />} />
         <Route path={"/contacto"} element={<Contact />} />
+        <Route path={"/busqueda"} element={<SearchResults />} />
       </Routes>
     </BrowserRouter>
   );
