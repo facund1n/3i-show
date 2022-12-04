@@ -6,7 +6,6 @@ import axios from "axios";
 import * as yup from "yup";
 import { FormSuccess, FormError } from "../Common";
 import { useSignIn } from "react-auth-kit";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
