@@ -12,7 +12,7 @@ const DestacadoMap = () => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/destacados/${params.id}`)
+    fetch(`http://localhost:4000/articulos/destacados/${params.id}`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));
