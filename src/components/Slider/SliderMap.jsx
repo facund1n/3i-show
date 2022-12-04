@@ -10,7 +10,7 @@ const SliderMap = () => {
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("http://localhost:4000/destacados/all")
+    fetch("http://localhost:4000/articulos/destacados/")
       .then((res) => res.json())
       .then((json) =>
         setDestacados(localStorage.setItem("destacados", JSON.stringify(json)))
