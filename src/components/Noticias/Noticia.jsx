@@ -1,26 +1,26 @@
 import { Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// 3
+// 1.3
 
 const Noticia = ({ noticia }) => {
   return (
     <>
       <Link
-        to={`noticias/${noticia._id}`}
+        to={`/articulos/noticias/${noticia._id}`}
         style={{ textDecoration: "inherit" }}
       >
         <Figure
-          className="bg-dark border-yellow links p-1"
+          className="bg-dark border-yellow links p-1 border-black"
           style={{ height: "95%" }}
         >
           <Figure.Image
-            className="img-fluid"
+            className="img-fluid "
             style={{ height: "70%" }}
             width={600}
             height={600}
-            src={noticia.imageLg}
-            alt={noticia.altLg}
+            src={noticia.image}
+            alt={noticia.alt}
           />
           <Figure.Caption
             as="h1"

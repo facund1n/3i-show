@@ -1,4 +1,4 @@
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 /* import { Link } from "react-router-dom"; */
 
 // 3
@@ -6,29 +6,24 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 const Show = ({ show }) => {
   return (
     <>
-      {/* <Link to={`shows/${show._id}`} style={{ textDecoration: "inherit" }}> */}
-      <Container>
-        <Card className="bg-dark mb-2">
-          <Row sm={2} md={2} lg={2}>
-            <Col>
-              <Card.Img className="w-100" src={show.imageLg} alt={show.altSm} />
-            </Col>
-            <Col>
-              <div className="flex-column text-center align-self-center">
-                <h1>{show.title}</h1>
-                <article>{show.description}</article>
-                <span>
-                  Tickets en:{" "}
-                  <a href={show.ticketsUrl} className="f-yellow">
-                    {show.ticketsUrl}
-                  </a>
-                </span>
-              </div>
-            </Col>
-          </Row>
-        </Card>
-      </Container>
-      {/* </Link> */}
+      <Card bg="dark" border="black" className="mb-2" style={{ height: "95%" }}>
+        <Card.Img src={show.image} alt={show.alt} style={{ height: "50%" }} />
+        <Card.Body>
+          <Card.Text>
+            {show.title}
+            <br />
+            {show.subtitle}
+          </Card.Text>
+          <hr />
+          <Card.Text>
+            <span>Tickets en:</span>
+            <br />
+            <a href={show.ticketsUrl} className="f-yellow">
+              {show.ticketsUrl}
+            </a>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </>
   );
 };
