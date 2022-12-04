@@ -1,23 +1,40 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Social from "./Social";
 
 const Footer = () => {
   return (
     <>
-      <Container className="mt-auto py-4 text-center gradient1">
-        <Row lg={6} sm={3} xs={1} className="justify-content-center">
-          <Col className="align-items-center">
+      <Container className="py-4 text-center gradient1">
+        <hr />
+        <Row lg={4} md={4} sm={1} className="justify-content-center ">
+          <Col className="align-self-center">
             <img alt="logo" src="/img/hmb.png" className="img-fluid me-auto" />
           </Col>
-          <Col>
+          <Col className="align-self-center ">
+            <Link to="/articulos/destacados" className="f-yellow">
+              Destacados
+            </Link>
+            <br />
+            <Link to="/contacto" className="f-yellow">
+              Noticias
+            </Link>
+            <br />
+          </Col>
+          <Col className="align-self-center ">
+            <Link to="/contacto" className="f-yellow">
+              Shows
+            </Link>
+            <br />
+            <Link to="/contacto" className="f-yellow">
+              Contacto
+            </Link>
+          </Col>
+          <Col className="align-self-center">
             <Social />
-            <p>Política de privacidad</p>
-            <p>Condiciones de uso</p>
           </Col>
         </Row>
-        <Row>
-          <p>copyright - 2022</p>
-        </Row>
+        <span>copyright - 2022</span>
       </Container>
     </>
   );
