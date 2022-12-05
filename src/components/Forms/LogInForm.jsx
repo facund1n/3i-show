@@ -29,7 +29,7 @@ export default function RegisterForm() {
 
   const onSubmit = async (values) => {
     const response = await axios
-      .post("http://localhost:4000/users/login", values)
+      .post("http://localhost:4000/login", values)
       .catch((err) => {
         if (err) setError(err.response.data.message);
         setSuccess(null);

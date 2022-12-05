@@ -2,10 +2,14 @@ import { Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
 import CommentBox from "../Comments/CommentBox";
+import SavePosts from "../SavePosts";
 
 // 2.2
 
-const DestacadoDetail = ({ data }) => {
+const DestacadoDetail = ({ data, auth }) => {
+  /*   const [first, setfirst] = useState(second);
+  const getUserName = Cookies.get("_auth_state"); */
+
   return (
     <>
       <StickyNav />
@@ -24,6 +28,7 @@ const DestacadoDetail = ({ data }) => {
           />
           <br />
         </div>
+        {auth ? <SavePosts /> : undefined}
         <Container>
           <hr />
           <h1>{data.subtitle}</h1>

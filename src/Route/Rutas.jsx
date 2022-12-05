@@ -9,17 +9,26 @@ import CommentBox from "../components/Comments/CommentBox";
 import Register from "../views/Register";
 import Login from "../views/Login";
 import Contact from "../views/Contact";
-import SearchResults from "../components/SearchResults";
+import UserPanel from "../components/UserPanel";
+import Cookies from "js-cookie";
+import { useState, useEffect } from "react";
 
 const Rutas = () => {
+  const [auth, setAuth] = useState();
+  const authState = Cookies.get("_auth_state");
+
+  useEffect(() => {
+    !authState ? setAuth(false) : setAuth(true);
+  }, [auth]);
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main auth={auth} />} />
         <Route path="*" element={<ErrorPage />} />
         <Route
           path={"/articulos/destacados/:id"}
-          element={<DestacadoDetailMap />}
+          element={<DestacadoDetailMap auth={auth} />}
         />
         <Route
           path={"/articulos/noticias/:id"}
@@ -30,7 +39,7 @@ const Rutas = () => {
         <Route path={"/register"} element={<Register />} />
         <Route path={"/commentbox"} element={<CommentBox />} />
         <Route path={"/contacto"} element={<Contact />} />
-        <Route path={"/busqueda"} element={<SearchResults />} />
+        <Route path={"/users/:id"} element={<UserPanel />} />
       </Routes>
     </BrowserRouter>
   );

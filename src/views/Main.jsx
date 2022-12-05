@@ -9,19 +9,10 @@ import NoticiasMap from "../components/Noticias/NoticiasMap";
 import ShowsMap from "../components/Shows/ShowsMap";
 import GalleryMap from "../components/Gallery/GalleryMap";
 import DestacadosMap from "../components/Destacados/DestacadosMap";
-import Cookies from "js-cookie";
-import { useState, useEffect } from "react";
 
 import { Container } from "react-bootstrap";
 
-const Main = () => {
-  const [auth, setAuth] = useState();
-  const authState = Cookies.get("_auth_state");
-
-  useEffect(() => {
-    !authState ? setAuth(false) : setAuth(true);
-  }, [auth]);
-
+const Main = ({ auth }) => {
   return (
     <>
       <LogoNav />

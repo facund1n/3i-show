@@ -36,7 +36,7 @@ export default function RegisterForm() {
     const { ...data } = values;
 
     const response = await axios
-      .post("http://localhost:4000/users/register", data)
+      .post("http://localhost:4000/register", data)
       .catch((err) => {
         if (err) setError(err.response.data.message);
         setSuccess(null);
@@ -47,6 +47,7 @@ export default function RegisterForm() {
       setSuccess(response.data.message);
       formik.resetForm();
       setInterval(() => {
+        window.location.reload();
         navigate("/");
       }, 3500);
     }
