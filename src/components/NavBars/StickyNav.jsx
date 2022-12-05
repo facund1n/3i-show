@@ -1,15 +1,4 @@
-/* 
-Home
-Destacado
-Contacto
-Me gusta (debería agregarse un icono con la cantidad de favoritos que se agregan -badge-)
-Icono de Contacto (icono a la derecha) que nos va a llevar al formulario de contacto.
-  
-Mobile:
-    - logo + menú hamburguesa ( con buscador ) (referencia página la gaceta) */
-
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
-import SearchInput from "../SearchInput";
 import Social from "../Social";
 
 function StickyNav() {
@@ -35,11 +24,7 @@ function StickyNav() {
             <Nav.Link href="/contacto">CONTACTO</Nav.Link>
             <Social /> {/* redes sociales */}
           </Nav>
-          <Form className="d-flex">
-            <SearchInput />
-            {/* AGREGAR COMPONENTE DE BOTON DE BÚSQUEDA
-             */}
-          </Form>
+          <Form className="d-flex"></Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
