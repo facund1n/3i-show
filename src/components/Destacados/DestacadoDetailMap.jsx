@@ -5,7 +5,7 @@ import DestacadoDetail from "./DestacadoDetail";
 
 // 2.1
 
-const DestacadoMap = () => {
+const DestacadoMap = ({ auth }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
@@ -19,7 +19,9 @@ const DestacadoMap = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <>{isLoading ? <Loader /> : <DestacadoDetail data={data} />}</>;
+  return (
+    <>{isLoading ? <Loader /> : <DestacadoDetail data={data} auth={auth} />}</>
+  );
 };
 
 export default DestacadoMap;
