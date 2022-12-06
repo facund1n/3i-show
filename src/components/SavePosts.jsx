@@ -14,20 +14,17 @@ const SavePosts = () => {
 
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
-  const [currentUrl, setCurrentUrl] = useState(
-    JSON.stringify(window.location.href)
-  );
-
+  const [currentUrlId, setCurrentUrlId] = useState(window.location.pathname);
+  console.log(userCleaned);
   useEffect(() => {
-    setCurrentUrl(window.location.href);
-    console.log("URL? ", currentUrl, "USER: ", userCleaned);
+    setCurrentUrlId(window.location.pathname);
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios
       .patch(`http://localhost:4000/users/${userCleaned}/saved`, {
-        saved: currentUrl,
+        saved: currentUrlId,
       })
       .catch((err) => {
         if (err) setError(err.response.data.message);
