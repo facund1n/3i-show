@@ -3,6 +3,7 @@ import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
 import CommentBox from "../Comments/CommentBox";
 import SavePosts from "../SavePosts";
+import LikePosts from "../LikePosts";
 
 // 2.2
 
@@ -29,6 +30,7 @@ const DestacadoDetail = ({ data, auth }) => {
           <br />
         </div>
         {auth ? <SavePosts /> : undefined}
+        {auth ? <LikePosts /> : undefined}
         <Container>
           <hr />
           <h1>{data.subtitle}</h1>
