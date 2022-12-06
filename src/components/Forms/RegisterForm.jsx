@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 const validationSchema = yup.object({
   name: yup
     .string()
+    .matches(/^[A-z-a-z]+$/, "Solo letras y números")
     .min(2, "mínimo 2 carácteres")
     .max(30, "máximo 30 carácteres")
     .required("Requerido"),
