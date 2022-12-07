@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import { SaveSuccess, SaveError } from "./Common";
+import { LikeSuccess, LikeError } from "./Common";
 import Cookies from "js-cookie";
 
 const SavePosts = () => {
@@ -23,7 +23,7 @@ const SavePosts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios
-      .patch(`http://localhost:4000/users/${userCleaned}/liked`, {
+      .patch(`http://localhost:4000/users/${userCleaned}/like`, {
         liked: currentUrlId,
       })
       .catch((err) => {
@@ -41,8 +41,8 @@ const SavePosts = () => {
 
   return (
     <>
-      {!error && <SaveSuccess>{success ? success : ""}</SaveSuccess>}
-      {!success && <SaveError>{error ? error : ""}</SaveError>}
+      {!error && <LikeSuccess>{success ? success : ""}</LikeSuccess>}
+      {!success && <LikeError>{error ? error : ""}</LikeError>}
       <Form onSubmit={handleSubmit}>
         <Button type="submit" variant="warning">
           like 👍

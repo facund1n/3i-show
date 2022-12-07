@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormSuccess = styled.span`
-  color: #28a828;
+  color: #8ffc00;
   font-size: 30px;
   min-height: 100%;
   font-weight: 600;
@@ -14,30 +14,30 @@ export const FormError = styled.span`
   font-weight: 600;
 `;
 
-export const SaveSuccess = styled.span`
-  color: #28a828;
-  font-size: 24px;
-  min-height: 100%;
-  font-weight: 500;
-`;
-
-export const SaveError = styled.span`
-  color: #f1700f;
-  font-size: 24px;
-  min-height: 100%;
-  font-weight: 500;
-`;
-
 export const SavedPostSuccess = styled.span`
-  color: #28a828;
-  font-size: 24px;
+  color: #8ffc00;
+  font-size: 16px;
   min-height: 100%;
-  font-weight: 500;
+  font-weight: bolder;
 `;
 
 export const SavedPostError = styled.span`
   color: #ffffff;
   font-size: 24px;
+  min-height: 100%;
+  font-weight: 500;
+`;
+
+export const LikeSuccess = styled.span`
+  color: #8ffc00;
+  font-size: 16px;
+  min-height: 100%;
+  font-weight: bolder;
+`;
+
+export const LikeError = styled.span`
+  color: #ffffff;
+  font-size: 16px;
   min-height: 100%;
   font-weight: 500;
 `;

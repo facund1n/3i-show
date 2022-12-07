@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import { SaveSuccess, SaveError } from "./Common";
+import { SavedPostSuccess, SavedPostError } from "./Common";
 import Cookies from "js-cookie";
 
 const SavePosts = () => {
@@ -41,8 +41,8 @@ const SavePosts = () => {
 
   return (
     <>
-      {!error && <SaveSuccess>{success ? success : ""}</SaveSuccess>}
-      {!success && <SaveError>{error ? error : ""}</SaveError>}
+      {!error && <SavedPostSuccess>{success ? success : ""}</SavedPostSuccess>}
+      {!success && <SavedPostError>{error ? error : ""}</SavedPostError>}
       <Form onSubmit={handleSubmit}>
         <Button type="submit" variant="warning">
           GUARDAR
