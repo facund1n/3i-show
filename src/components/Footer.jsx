@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <Container className="py-4 text-center gradient1">
         <hr />
-        <Row lg={4} md={4} sm={1} className="justify-content-center ">
+        <Row lg={4} md={4} sm={1} className="justify-content-center">
           <Col className="align-self-center">
             <img alt="logo" src="/img/hmb.png" className="img-fluid me-auto" />
           </Col>
@@ -34,7 +34,13 @@ const Footer = () => {
             <Social />
           </Col>
         </Row>
-        <span>copyright - 2022</span>
+        <span>© copyright - 2022</span>
+        <br />
+        <span>Facundo Samuel Sanchez</span>
+        <br />
+        <a href="https://github.com/facund1n/" className="f-yellow">
+          https://github.com/facund1n/
+        </a>
       </Container>
     </>
   );

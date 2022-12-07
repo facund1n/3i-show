@@ -31,14 +31,11 @@ const NoticiaDetail = ({ data, auth, userLogged }) => {
         <Container>
           <hr />
           <h1>{data.subtitle}</h1>
-          <h3>{data.description}</h3>
           <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
         {auth ? <CommentBox userLogged={userLogged} /> : undefined}
       </Container>
-      {/* AGREGAR COMENT BOX */}
-      <CommentBox />
       <Footer />
     </>
   );
