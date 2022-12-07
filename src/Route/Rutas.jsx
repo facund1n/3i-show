@@ -10,8 +10,8 @@ import Register from "../views/Register";
 import Login from "../views/Login";
 import Contact from "../views/Contact";
 import UserPanel from "../components/UserPanel";
-import UserSaved from "../components/UserSaved";
-import UserLiked from "../components/UserLiked";
+import GetSavedPosts from "../components/SavedPost/GetSavedPosts";
+import GetLikedPosts from "../components/LikedPosts/GetLikedPosts";
 import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 
@@ -53,9 +53,18 @@ const Rutas = () => {
         <Route path={"/register"} element={<Register />} />
         <Route path={"/commentbox"} element={<CommentBox />} />
         <Route path={"/contacto"} element={<Contact />} />
-        <Route path={"/users/:id"} element={<UserPanel />} />
-        <Route path={"/users/:id/saved"} element={<UserSaved />} />
-        <Route path={"/users/:id/liked"} element={<UserLiked />} />
+        <Route
+          path={"/users/:id"}
+          element={<UserPanel userLogged={userLogged} />}
+        />
+        <Route
+          path={"/users/:id/saved"}
+          element={<GetSavedPosts userLogged={userLogged} />}
+        />
+        <Route
+          path={"/users/:id/liked"}
+          element={<GetLikedPosts userLogged={userLogged} />}
+        />
       </Routes>
     </BrowserRouter>
   );
