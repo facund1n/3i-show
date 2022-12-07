@@ -12,7 +12,7 @@ import DestacadosMap from "../components/Destacados/DestacadosMap";
 
 import { Container } from "react-bootstrap";
 
-const Main = ({ auth }) => {
+const Main = ({ auth, userLogged }) => {
   return (
     <>
       <LogoNav />
@@ -22,7 +22,7 @@ const Main = ({ auth }) => {
           <Container className="d-flex justify-content-end mt-1">
             {auth ? (
               <>
-                <LogOut />
+                <LogOut userLogged={userLogged} />
               </>
             ) : (
               <>

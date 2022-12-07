@@ -21,7 +21,7 @@ const validationSchema = yup.object({
     .required("Requerido"),
 });
 
-export default function RegisterForm() {
+export default function LoginForm() {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
   const singIn = useSignIn();

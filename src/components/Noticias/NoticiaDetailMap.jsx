@@ -5,7 +5,7 @@ import NoticiaDetail from "./NoticiaDetail";
 
 // 2.1
 
-const NoticiaMap = () => {
+const NoticiaMap = ({ auth, userLogged }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
@@ -19,7 +19,15 @@ const NoticiaMap = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <>{isLoading ? <Loader /> : <NoticiaDetail data={data} />}</>;
+  return (
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <NoticiaDetail data={data} auth={auth} userLogged={userLogged} />
+      )}
+    </>
+  );
 };
 
 export default NoticiaMap;
