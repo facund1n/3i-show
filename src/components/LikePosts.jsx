@@ -15,7 +15,7 @@ const SavePosts = () => {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
   const [currentUrlId, setCurrentUrlId] = useState(window.location.pathname);
-  console.log(userCleaned);
+
   useEffect(() => {
     setCurrentUrlId(window.location.pathname);
   }, []);
