@@ -13,8 +13,8 @@ const validationSchema = yup.object({
     .required("Escribí algo:"),
 });
 
-export default function CommentBox() {
-  const [success, setSuccess] = useState(null);
+export default function CommentBox({ userLogged }) {
+  /*   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState("");
   const [userName, setUser] = useState("");
@@ -23,7 +23,7 @@ export default function CommentBox() {
 
   useEffect(() => {
     setUrl(getUrl);
-    setUser(getUser);
+    setUser(userLogged); // ver los nombres de props
   }, []);
 
   const onSubmit = async (values) => {
@@ -76,5 +76,6 @@ export default function CommentBox() {
         </div>
       </Form>
     </Container>
-  );
+  ); */
+  return <div>commentbox</div>;
 }
