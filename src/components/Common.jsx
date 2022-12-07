@@ -27,3 +27,17 @@ export const SaveError = styled.span`
   min-height: 100%;
   font-weight: 500;
 `;
+
+export const SavedPostSuccess = styled.span`
+  color: #28a828;
+  font-size: 24px;
+  min-height: 100%;
+  font-weight: 500;
+`;
+
+export const SavedPostError = styled.span`
+  color: #ffffff;
+  font-size: 24px;
+  min-height: 100%;
+  font-weight: 500;
+`;
