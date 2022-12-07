@@ -5,7 +5,7 @@ import DestacadoDetail from "./DestacadoDetail";
 
 // 2.1
 
-const DestacadoMap = ({ auth }) => {
+const DestacadoMap = ({ auth, userLogged }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
@@ -20,7 +20,13 @@ const DestacadoMap = ({ auth }) => {
   }, []);
 
   return (
-    <>{isLoading ? <Loader /> : <DestacadoDetail data={data} auth={auth} />}</>
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <DestacadoDetail data={data} auth={auth} userLogged={userLogged} />
+      )}
+    </>
   );
 };
 

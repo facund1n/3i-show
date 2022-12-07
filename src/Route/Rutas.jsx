@@ -16,25 +16,36 @@ import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 
 const Rutas = () => {
-  const [auth, setAuth] = useState();
-  const authState = Cookies.get("_auth_state");
+  const [auth, setAuth] = useState("");
+  const [userLogged, setUserLogged] = useState("");
+
+  const authState = Cookies.get("_auth"); // token
+  const getUserName = Cookies.get("_auth_state"); // usuario
 
   useEffect(() => {
-    !authState ? setAuth(false) : setAuth(true);
-  }, [auth]);
+    if (authState && getUserName) {
+      const userNoRegExp = getUserName.replace(/[^a-zA-Z 0-9.]+/g, "");
+      const userCleaned = userNoRegExp.slice(4);
+      !authState ? setAuth(false) : setAuth(true);
+      !getUserName ? setUserLogged("") : setUserLogged(userCleaned);
+    }
+  }, [auth, userLogged]);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main auth={auth} />} />
+        <Route
+          path="/"
+          element={<Main auth={auth} userLogged={userLogged} />}
+        />
         <Route path="*" element={<ErrorPage />} />
         <Route
           path={"/articulos/destacados/:id"}
-          element={<DestacadoDetailMap auth={auth} />}
+          element={<DestacadoDetailMap auth={auth} userLogged={userLogged} />}
         />
         <Route
           path={"/articulos/noticias/:id"}
-          element={<NoticiaDetailMap />}
+          element={<NoticiaDetailMap auth={auth} userLogged={userLogged} />}
         />
         <Route path={"/articulos/shows/:id"} element={<ShowDetailMap />} />
         <Route path={"/login"} element={<Login />} />

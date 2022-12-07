@@ -2,10 +2,12 @@ import { Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
 import CommentBox from "../Comments/CommentBox";
+import SavePosts from "../SavedPost/SavePosts";
+import LikePosts from "../LikedPosts/LikePosts";
 
 // 2.2
 
-const NoticiaDetail = ({ data }) => {
+const NoticiaDetail = ({ data, auth, userLogged }) => {
   return (
     <>
       <StickyNav />
@@ -24,6 +26,8 @@ const NoticiaDetail = ({ data }) => {
           />
           <br />
         </div>
+        {auth ? <SavePosts userLogged={userLogged} /> : undefined}
+        {auth ? <LikePosts userLogged={userLogged} /> : undefined}
         <Container>
           <hr />
           <h1>{data.subtitle}</h1>
@@ -31,6 +35,7 @@ const NoticiaDetail = ({ data }) => {
           <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
+        {auth ? <CommentBox userLogged={userLogged} /> : undefined}
       </Container>
       {/* AGREGAR COMENT BOX */}
       <CommentBox />
