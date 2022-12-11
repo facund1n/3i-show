@@ -26,19 +26,16 @@ const NoticiaDetail = ({ data, auth, userLogged }) => {
           />
           <br />
         </div>
-        {auth ? <SavePosts userLogged={userLogged} /> : undefined}
-        {auth ? <LikePosts userLogged={userLogged} /> : undefined}
+        {auth ? <SavePosts userLogged={userLogged} data={data} /> : undefined}
+        {auth ? <LikePosts userLogged={userLogged} data={data} /> : undefined}
         <Container>
           <hr />
           <h1>{data.subtitle}</h1>
-          <h3>{data.description}</h3>
           <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
         {auth ? <CommentBox userLogged={userLogged} /> : undefined}
       </Container>
-      {/* AGREGAR COMENT BOX */}
-      <CommentBox />
       <Footer />
     </>
   );

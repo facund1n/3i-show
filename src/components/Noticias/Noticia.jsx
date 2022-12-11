@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 // 1.3
 
-const Noticia = ({ noticia }) => {
+const Noticia = ({ data }) => {
   return (
     <>
       <Link
-        to={`/articulos/noticias/${noticia._id}`}
+        to={`/articulos/noticias/${data._id}`}
         style={{ textDecoration: "inherit" }}
       >
         <Figure
@@ -19,15 +19,15 @@ const Noticia = ({ noticia }) => {
             style={{ height: "70%" }}
             width={600}
             height={600}
-            src={noticia.image}
-            alt={noticia.alt}
+            src={data.image}
+            alt={data.alt}
           />
           <Figure.Caption
             as="h1"
             className="text-white text-center"
             style={{ height: "30%" }}
           >
-            {noticia.title}
+            {data.title}
           </Figure.Caption>
         </Figure>
       </Link>

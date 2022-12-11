@@ -26,8 +26,8 @@ const DestacadoDetail = ({ data, auth, userLogged }) => {
           />
           <br />
         </div>
-        {auth ? <SavePosts userLogged={userLogged} /> : undefined}
-        {auth ? <LikePosts userLogged={userLogged} /> : undefined}
+        {auth ? <SavePosts userLogged={userLogged} data={data} /> : undefined}
+        {auth ? <LikePosts userLogged={userLogged} data={data} /> : undefined}
         <Container>
           <hr />
           <h1>{data.subtitle}</h1>
