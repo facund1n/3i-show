@@ -9,27 +9,25 @@ import CommentBox from "../components/Comments/CommentBox";
 import Register from "../views/Register";
 import Login from "../views/Login";
 import Contact from "../views/Contact";
-import UserPanel from "../components/UserPanel";
+import UserPanel from "../components/UserPanel/UserPanel";
 import GetSavedPosts from "../components/SavedPost/GetSavedPosts";
 import GetLikedPosts from "../components/LikedPosts/GetLikedPosts";
 import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 
 const Rutas = () => {
-  const [auth, setAuth] = useState("");
-  const [userLogged, setUserLogged] = useState("");
-
+  const [auth, setAuth] = useState();
+  const [userLogged, setUserLogged] = useState();
   const authState = Cookies.get("_auth"); // token
-  const getUserName = Cookies.get("_auth_state"); // usuario
+  const getUserName = Cookies.get("_auth_state"); // usuarios
 
   useEffect(() => {
     if (authState && getUserName) {
       const userNoRegExp = getUserName.replace(/[^a-zA-Z 0-9.]+/g, "");
       const userCleaned = userNoRegExp.slice(4);
       !authState ? setAuth(false) : setAuth(true);
-      !getUserName ? setUserLogged("") : setUserLogged(userCleaned);
+      !getUserName ? setUserLogged() : setUserLogged(userCleaned);
     }
-    // eslint-disable-next-line
   }, [auth, userLogged]);
 
   return (
