@@ -7,9 +7,9 @@ const NoticiasGrid = ({ data }) => {
   return (
     <Container>
       <Row xs={2} md={5} lg={5}>
-        {data.map((noticia, i) => (
+        {data.map((data, i) => (
           <div key={i}>
-            <Noticia noticia={noticia} />
+            <Noticia data={data} />
           </div>
         ))}
       </Row>
