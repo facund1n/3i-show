@@ -19,7 +19,7 @@ const SavedButton = ({ userLogged }) => {
     <>
       <Link
         to={`/users/${userLogged}/saved`}
-        className="f-yellow btn btn-outline-warning btn-lg my-2"
+        className="btn btn-outline-warning btn-lg my-2"
       >
         Publicaciones Guardadas{" "}
         <Badge bg="warning" text="dark">

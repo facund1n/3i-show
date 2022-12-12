@@ -12,6 +12,7 @@ import Contact from "../views/Contact";
 import UserPanel from "../components/UserPanel/UserPanel";
 import GetSavedPosts from "../components/SavedPost/GetSavedPosts";
 import GetLikedPosts from "../components/LikedPosts/GetLikedPosts";
+import SearchResults from "../components/Search/SearchResults";
 import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 
@@ -63,6 +64,7 @@ const Rutas = () => {
           path={"/users/:id/liked"}
           element={<GetLikedPosts userLogged={userLogged} />}
         />
+        <Route path={"/busqueda"} element={<SearchResults />} />
       </Routes>
     </BrowserRouter>
   );

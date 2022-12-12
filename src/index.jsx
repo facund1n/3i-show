@@ -9,16 +9,16 @@ import { AuthProvider } from "react-auth-kit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <AuthProvider
-      authType={"cookie"}
-      authName={"_auth"} // nombre cookie
-      cookieDomain={window.location.hostname} // dominio de cookie
-      cookieSecure={false} // protocolo HTTP, no HTTPS.
-    >
-      <div className="b-black">
-        <Rutas />
-      </div>
-    </AuthProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <AuthProvider
+    authType={"cookie"}
+    authName={"_auth"} // nombre cookie
+    cookieDomain={window.location.hostname} // dominio de cookie
+    cookieSecure={false} // protocolo HTTP, no HTTPS.
+  >
+    <div className="b-black">
+      <Rutas />
+    </div>
+  </AuthProvider>
+  // </React.StrictMode>
 );

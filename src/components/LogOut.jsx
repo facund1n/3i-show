@@ -9,9 +9,7 @@ const LogOut = ({ userLogged }) => {
       <span>Logedo como: </span>
       <br />
       <Link to={`/users/${userLogged}`}>
-        <h3 className="f-yellow btn btn-outline-warning btn-lg my-2">
-          {userLogged}
-        </h3>
+        <h3 className="btn btn-outline-warning btn-lg my-2">{userLogged}</h3>
       </Link>
       <div
         className="f-yellow mx-1 links"
