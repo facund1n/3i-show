@@ -19,7 +19,7 @@ const LikedButton = ({ userLogged }) => {
     <>
       <Link
         to={`/users/${userLogged}/liked`}
-        className="f-yellow btn btn-outline-warning btn-lg my-2"
+        className="btn btn-outline-warning btn-lg my-2"
       >
         Publicaciones que me gustaron{" "}
         <Badge bg="warning" text="dark">
