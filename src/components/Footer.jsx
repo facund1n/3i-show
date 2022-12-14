@@ -20,13 +20,13 @@ const Footer = () => {
               Destacados
             </Link>
             <br />
-            <Link to="/contacto" className="f-yellow">
+            <Link to="/articulos/noticias" className="f-yellow">
               Noticias
             </Link>
             <br />
           </Col>
           <Col className="align-self-center ">
-            <Link to="/contacto" className="f-yellow">
+            <Link to="/articulos/shows" className="f-yellow">
               Shows
             </Link>
             <br />
