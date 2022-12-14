@@ -13,7 +13,7 @@ const ShowsMap = () => {
     fetch("http://localhost:4000/articulos/shows/")
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
   }, []);
 
   return <>{isLoading ? <Loader /> : <ShowsGrid data={data} />}</>;

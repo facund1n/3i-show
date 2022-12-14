@@ -12,12 +12,16 @@ const GetLikedPosts = () => {
     fetch(`http://localhost:4000/users/${params.id}/liked/`)
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
   }, []);
 
   return (
     <>
-      {isLoading ? <Loader /> : data.map((l) => <LikedPostGrid l={l.liked} />)}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        data.map((l, k) => <LikedPostGrid l={l.liked} key={k} />)
+      )}
     </>
   );
 };

@@ -13,7 +13,7 @@ const NoticiasMap = () => {
     fetch("http://localhost:4000/articulos/noticias/")
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
   }, []);
 
   return <>{isLoading ? <Loader /> : <NoticiasGrid data={data} />}</>;

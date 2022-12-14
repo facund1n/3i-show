@@ -13,7 +13,7 @@ const UserPanel = ({ userLogged }) => {
         <StickyNav />
         <SavedButton userLogged={userLogged} />
         <LikedButton userLogged={userLogged} />
-      </Container>{" "}
+      </Container>
       <Footer />
     </>
   );

@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 
-const imagenes = JSON.parse(localStorage.getItem("images"));
+// const imagenes = JSON.parse(localStorage.getItem("images"));
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -38,60 +38,62 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default class CustomArrows extends Component {
-  render() {
-    var settings = {
-      infinite: false,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      initialSlide: 0,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: false,
-            dots: false,
-          },
+function render() {
+  var settings = {
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-        {
-          breakpoint: 425,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-      ],
-    };
-
-    return (
-      <Container className="b-grey">
-        <Slider {...settings}>
-          {!imagenes
-            ? window.location.reload()
-            : imagenes.map((data, i) => (
-                <div key={i}>
-                  <img
-                    className="img-fluid mb-2 px-1"
-                    style={{ height: "100%", width: "100%" }}
-                    src={data.imageLg}
-                    alt={data.altLg}
-                  />
-                </div>
-              ))}
-        </Slider>
-      </Container>
-    );
-  }
+      },
+    ],
+  };
 }
+
+const GallerySlider = ({ imagenes, settings }) => {
+  return (
+    <Container className="b-grey">
+      <Slider {...settings}>
+        {!imagenes
+          ? window.location.reload()
+          : imagenes.map((data, i) => (
+              <div key={i}>
+                <img
+                  className="img-fluid mb-2 px-1"
+                  style={{ height: "100%", width: "100%" }}
+                  src={data.imageLg}
+                  alt={data.altLg}
+                />
+              </div>
+            ))}
+      </Slider>
+    </Container>
+  );
+};
+
+export default GallerySlider;

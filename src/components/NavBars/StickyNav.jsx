@@ -32,16 +32,16 @@ function StickyNav() {
               className="b-grey"
             >
               <NavDropdown.Item href="#action/3.1">
-                <Nav.Link href="/#destacadosIndex">DESTACADOS</Nav.Link>
+                <Nav.Link href="/articulos/destacados">DESTACADOS</Nav.Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                <Nav.Link href="/#noticiasIndex">NOTICIAS</Nav.Link>
+                <Nav.Link href="/articulos/noticias">NOTICIAS</Nav.Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
-                <Nav.Link href="/#fotosIndex">FOTOS</Nav.Link>
+                <Nav.Link href="/fotos">FOTOS</Nav.Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">
-                <Nav.Link href="/#showsIndex">SHOWS</Nav.Link>
+                <Nav.Link href="/shows">SHOWS</Nav.Link>
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/contacto" className="f-yellow">

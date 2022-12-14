@@ -34,7 +34,7 @@ const NoticiaDetail = ({ data, auth, userLogged }) => {
           <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
-        {auth ? <CommentBox userLogged={userLogged} /> : undefined}
+        {/*   {auth ? <CommentBox userLogged={userLogged} /> : undefined} */}
       </Container>
       <Footer />
     </>

@@ -5,21 +5,29 @@ import ShowDetail from "./ShowDetail";
 
 // 2.1
 
-const ShowMap = () => {
+const ShowDetailMap = ({ auth, userLogged }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/shows/${params.id}`)
+    fetch(`http://localhost:4000/articulos/shows/${params.id}`)
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
     // eslint-disable-next-line
   }, []);
 
-  return <>{isLoading ? <Loader /> : <ShowDetail data={data} />}</>;
+  return (
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ShowDetail data={data} auth={auth} userLogged={userLogged} />
+      )}
+    </>
+  );
 };
 
-export default ShowMap;
+export default ShowDetailMap;
