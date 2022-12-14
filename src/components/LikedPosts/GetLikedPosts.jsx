@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import LikedPostGrid from "./LikedPostGrid";
 import Loader from "../Loader";
 
-const GetLikedPosts = () => {
+const GetLikedPosts = ({ userLogged }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
-  const params = useParams();
+  // const params = useParams();
 
   useEffect(() => {
-    fetch(`https://3i-show-api-node.vercel.app/users/${params.id}/liked/`)
+    fetch(`https://3i-show-api-node.vercel.app/users/${userLogged}/liked/`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(() => setIsLoading(false));
