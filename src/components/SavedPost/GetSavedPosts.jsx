@@ -13,6 +13,7 @@ const GetSavedPosts = ({ userLogged }) => {
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(() => setIsLoading(false));
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -20,7 +21,7 @@ const GetSavedPosts = ({ userLogged }) => {
       {isLoading ? (
         <Loader />
       ) : (
-        data.map((d, k) => <SavedPostGrid d={d.saved} key={k} />)
+        data.map((data, k) => <SavedPostGrid data={data.saved} key={k} />)
       )}
     </>
   );

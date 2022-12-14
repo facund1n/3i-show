@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Container, Badge } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const SavedButton = ({ userLogged }) => {
@@ -13,6 +13,7 @@ const SavedButton = ({ userLogged }) => {
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(data.map((d) => setCountSaved(d.saved)));
+    // eslint-disable-next-line
   }, [data]);
 
   return (

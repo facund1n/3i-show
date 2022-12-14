@@ -1,7 +1,7 @@
-import { Container, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
-import CommentBox from "../Comments/CommentBox";
+// import CommentBox from "../Comments/CommentBox";
 import SavePosts from "../SavedPost/SavePosts";
 import LikePosts from "../LikedPosts/LikePosts";
 
