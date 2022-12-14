@@ -9,7 +9,7 @@ const SavedButton = ({ userLogged }) => {
   const [countSaved, setCountSaved] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/${params.id}/saved/`)
+    fetch(`https://3i-show-api-node.vercel.app/users/${params.id}/saved/`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(data.map((d) => setCountSaved(d.saved)));

@@ -10,7 +10,7 @@ const DestacadosMap = () => {
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("http://localhost:4000/articulos/destacados/")
+    fetch("https://3i-show-api-node.vercel.app/articulos/destacados/")
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(() => setIsLoading(false));

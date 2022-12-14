@@ -1,5 +1,4 @@
 import { Container, Form, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import SearchResults from "../Search/SearchResults";
 import Social from "../Social";
 
 function StickyNav() {

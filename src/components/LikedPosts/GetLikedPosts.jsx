@@ -9,10 +9,11 @@ const GetLikedPosts = () => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/${params.id}/liked/`)
+    fetch(`https://3i-show-api-node.vercel.app/users/${params.id}/liked/`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(() => setIsLoading(false));
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -20,7 +21,7 @@ const GetLikedPosts = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        data.map((l, k) => <LikedPostGrid l={l.liked} key={k} />)
+        data.map((data, k) => <LikedPostGrid data={data.liked} key={k} />)
       )}
     </>
   );

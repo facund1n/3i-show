@@ -10,7 +10,7 @@ const SearchResults = () => {
   // const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:4000/articulos`)
+    fetch(`https://3i-show-api-node.vercel.app/articulos`)
       .then((res) => res.json())
       .then((json) => setItems(json));
   }, []);

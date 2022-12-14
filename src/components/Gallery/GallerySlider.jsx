@@ -1,10 +1,7 @@
 // LG laptop 1024 x5 ITEMS || MD? TABLET 768 x4 ITEMS || MOBILE 425 x2 ITEMS
 
-import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
-
-// const imagenes = JSON.parse(localStorage.getItem("images"));
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -37,8 +34,9 @@ function SamplePrevArrow(props) {
     />
   );
 }
-
-function render() {
+// eslint-disable-next-line
+const render = () => {
+  // eslint-disable-next-line
   var settings = {
     infinite: false,
     speed: 300,
@@ -73,7 +71,7 @@ function render() {
       },
     ],
   };
-}
+};
 
 const GallerySlider = ({ imagenes, settings }) => {
   return (
