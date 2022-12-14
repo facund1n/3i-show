@@ -9,7 +9,7 @@ const LikedButton = ({ userLogged }) => {
   const [countLiked, setCountLiked] = useState("");
 
   useEffect(() => {
-    fetch(`https://3i-show-api-node.vercel.app/users/${params.id}/liked/`)
+    fetch(`https://3i-show-api-node.vercel.app/users/${userLogged}/liked/`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(data.map((d) => setCountLiked(d.liked)));
