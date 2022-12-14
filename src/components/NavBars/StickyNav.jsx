@@ -1,5 +1,4 @@
 import { Container, Form, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import SearchResults from "../Search/SearchResults";
 import Social from "../Social";
 
 function StickyNav() {
@@ -15,7 +14,7 @@ function StickyNav() {
         <Navbar.Brand href="/">
           <img
             alt="logo"
-            src="/img/logo.png"
+            src="https://tinypic.host/images/2022/12/14/logoe2de43a3ad4e2821.png"
             height="20px"
             className="d-block m-0 p-0"
           />

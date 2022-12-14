@@ -12,7 +12,7 @@ const ShowDetailMap = ({ auth, userLogged }) => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/articulos/shows/${params.id}`)
+    fetch(`https://3i-show-api-node.vercel.app/articulos/shows/${params.id}`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(() => setIsLoading(false));

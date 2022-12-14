@@ -6,11 +6,11 @@ import Footer from "../Footer";
 
 // 1.2
 
-const LikedPostGrid = ({ l }) => {
+const LikedPostGrid = ({ data }) => {
   const [likedExist, setDataExist] = useState(false);
-  console.log("GRID LIKED: ", l, typeof l);
   useEffect(() => {
-    l ? setDataExist(true) : setDataExist(false);
+    data ? setDataExist(true) : setDataExist(false);
+    // eslint-disable-next-line
   }, [likedExist]);
 
   return (
@@ -18,12 +18,12 @@ const LikedPostGrid = ({ l }) => {
       <StickyNav />
       <Container className="flex-column justify-content-center align-items-center mt-5 min-vh-100 b-black">
         <h3>Liked:</h3>
-        {l ? (
+        {data ? (
           <CardGroup>
             <Row xs={1} md={3} lg={4}>
-              {l.map((l, i) => (
-                <Col key={i}>
-                  <Liked l={l} />
+              {data.map((data, k) => (
+                <Col key={k}>
+                  <Liked data={data} />
                 </Col>
               ))}
             </Row>

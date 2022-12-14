@@ -11,7 +11,7 @@ const GalleryMap = () => {
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("http://localhost:4000/galerias/all")
+    fetch("https://3i-show-api-node.vercel.app/galerias/all")
       .then((res) => res.json())
       .then((json) => setImagenes(json))
       .then(() => setIsLoading(false));

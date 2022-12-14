@@ -11,12 +11,13 @@ const SavePosts = ({ userLogged, data }) => {
   useEffect(() => {
     setCurrentUrlId(window.location.pathname);
     setFullPost([data, currentUrlId]);
+    // eslint-disable-next-line
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios
-      .patch(`http://localhost:4000/users/${userLogged}/save`, {
+      .patch(`https://3i-show-api-node.vercel.app/users/${userLogged}/save`, {
         saved: fullPost,
       })
       .catch((err) => {

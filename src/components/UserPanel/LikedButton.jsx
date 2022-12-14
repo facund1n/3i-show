@@ -1,18 +1,17 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Container, Badge } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const LikedButton = ({ userLogged }) => {
-  const params = useParams();
   const [data, setData] = useState([]);
   const [countLiked, setCountLiked] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/${params.id}/liked/`)
+    fetch(`https://3i-show-api-node.vercel.app/users/${userLogged}/liked/`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(data.map((d) => setCountLiked(d.liked)));
+    // eslint-disable-next-line
   }, [data]);
 
   return (

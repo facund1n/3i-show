@@ -29,7 +29,7 @@ export default function LoginForm() {
 
   const onSubmit = async (values) => {
     const response = await axios
-      .post("http://localhost:4000/login", values)
+      .post("https://3i-show-api-node.vercel.app/login", values)
       .catch((err) => {
         if (err) setError(err.response.data.message);
         setSuccess(null);
