@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Card, Form, Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
 
 const SearchResults = () => {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState(""); // recibe valores del input
-  const [filter, setFilter] = useState("");
+  // const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:4000/articulos`)
+    fetch(`https://3i-show-api-node.vercel.app/articulos`)
       .then((res) => res.json())
       .then((json) => setItems(json));
   }, []);
@@ -20,9 +20,9 @@ const SearchResults = () => {
     setSearch(e.target.value);
   };
 
-  const filterHandler = (e) => {
+  /*  const filterHandler = (e) => {
     setFilter(e.target.value);
-  };
+  }; */
 
   const results = !search
     ? items
@@ -41,14 +41,14 @@ const SearchResults = () => {
           placeholder="escriba algo"
           className="form-control"
         ></input>
-        <Form.Select
+        {/*         <Form.Select
           aria-label="Default select example"
           className="bg-dark f-yellow"
         >
           <option value="all">Seleccione categoría...</option>
           <option value="destacados">Destacados</option>
           <option value="noticias">Noticias</option>
-        </Form.Select>
+        </Form.Select> */}
 
         {!search ? (
           <span>

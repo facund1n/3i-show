@@ -33,6 +33,7 @@ const Rutas = () => {
       !authState ? setAuth(false) : setAuth(true);
       !getUserName ? setUserLogged() : setUserLogged(userCleaned);
     }
+    // eslint-disable-next-line
   }, [auth, userLogged]);
 
   return (

@@ -12,7 +12,9 @@ const DestacadoMap = ({ auth, userLogged }) => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/articulos/destacados/${params.id}`)
+    fetch(
+      `https://3i-show-api-node.vercel.app/articulos/destacados/${params.id}`
+    )
       .then((res) => res.json())
       .then((json) => setData(json))
       .then(() => setIsLoading(false));

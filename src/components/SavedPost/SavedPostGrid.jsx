@@ -6,11 +6,11 @@ import Footer from "../Footer";
 
 // 1.2
 
-const SavedPostGrid = ({ d }) => {
+const SavedPostGrid = ({ data }) => {
   const [dataExist, setDataExist] = useState(false);
-  console.log("GRID DATA: ", d, typeof d);
   useEffect(() => {
-    d ? setDataExist(true) : setDataExist(false);
+    data ? setDataExist(true) : setDataExist(false);
+    // eslint-disable-next-line
   }, [dataExist]);
 
   return (
@@ -18,12 +18,12 @@ const SavedPostGrid = ({ d }) => {
       <StickyNav />
       <Container className="flex-column justify-content-center align-items-center mt-5 min-vh-100 b-black">
         <h3>Post Guardados:</h3>
-        {d ? (
+        {data ? (
           <CardGroup>
             <Row xs={1} md={3} lg={4}>
-              {d.map((d, i) => (
+              {data.map((data, i) => (
                 <Col key={i}>
-                  <Saved d={d} />
+                  <Saved data={data} />
                 </Col>
               ))}
             </Row>
