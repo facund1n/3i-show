@@ -1,10 +1,8 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const SavedButton = ({ userLogged }) => {
-  const params = useParams();
   const [data, setData] = useState([]);
   const [countSaved, setCountSaved] = useState("");
 
