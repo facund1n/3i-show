@@ -77,15 +77,15 @@ const Rutas = () => {
         <Route path={"/commentbox"} element={<CommentBox />} />
         <Route path={"/contacto"} element={<Contact />} />
         <Route
-          path={"/users/:id"}
+          path={`/users/${userLogged}`}
           element={<UserPanel userLogged={userLogged} />}
         />
         <Route
-          path={"/users/:id/saved"}
+          path={`/users/${userLogged}/saved`}
           element={<GetSavedPosts userLogged={userLogged} />}
         />
         <Route
-          path={"/users/:id/liked"}
+          path={`/users/${userLogged}/liked`}
           element={<GetLikedPosts userLogged={userLogged} />}
         />
         <Route path={"/busqueda"} element={<SearchResults />} />
