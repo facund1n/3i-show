@@ -11,6 +11,7 @@ const LikePosts = ({ userLogged, data }) => {
   useEffect(() => {
     setCurrentUrlId(window.location.pathname);
     setFullPost([data, currentUrlId]);
+    // eslint-disable-next-line
   }, []);
 
   const handleSubmit = async (e) => {
