@@ -13,13 +13,11 @@ const SearchResults = () => {
     fetch(`http://localhost:4000/articulos`)
       .then((res) => res.json())
       .then((json) => setItems(json));
-    //  .finally(() => setIsLoading(false));
   }, []);
 
   // filtrado (captuta valores del input) - NO ESTÁ FUNCIONAL TODAVÍA
   const searcher = (e) => {
     setSearch(e.target.value);
-    console.log(e.target.value);
   };
 
   const filterHandler = (e) => {
@@ -58,8 +56,8 @@ const SearchResults = () => {
           </span>
         ) : (
           results.map((item, k) => (
-            <Link to={`/articulos/${item.category}/${item._id}`}>
-              <Card key={k}>
+            <Link to={`/articulos/${item.category}/${item._id}`} key={k}>
+              <Card>
                 <Card.Body className="bg-dark">{item.title}</Card.Body>
               </Card>
             </Link>
