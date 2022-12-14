@@ -12,7 +12,7 @@ const SavedButton = ({ userLogged }) => {
     fetch(`http://localhost:4000/users/${params.id}/saved/`)
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(data.map((d) => setCountSaved(d.saved)));
+      .then(data.map((d) => setCountSaved(d.saved)));
   }, [data]);
 
   return (

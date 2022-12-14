@@ -12,12 +12,16 @@ const GetSavedPosts = ({ userLogged }) => {
     fetch(`http://localhost:4000/users/${params.id}/saved/`)
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
   }, []);
 
   return (
     <>
-      {isLoading ? <Loader /> : data.map((d) => <SavedPostGrid d={d.saved} />)}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        data.map((d, k) => <SavedPostGrid d={d.saved} key={k} />)
+      )}
     </>
   );
 };

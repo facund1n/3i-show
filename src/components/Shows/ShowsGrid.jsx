@@ -8,9 +8,9 @@ const DestacadosMapGrid = ({ data }) => {
     <Container>
       <CardGroup>
         <Row sm={1} md={3} lg={5}>
-          {data.map((show, i) => (
+          {data.map((data, i) => (
             <div key={i}>
-              <Show show={show} />
+              <Show data={data} />
             </div>
           ))}
         </Row>

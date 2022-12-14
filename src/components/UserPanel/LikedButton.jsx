@@ -12,7 +12,7 @@ const LikedButton = ({ userLogged }) => {
     fetch(`http://localhost:4000/users/${params.id}/liked/`)
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(data.map((d) => setCountLiked(d.liked)));
+      .then(data.map((d) => setCountLiked(d.liked)));
   }, [data]);
 
   return (

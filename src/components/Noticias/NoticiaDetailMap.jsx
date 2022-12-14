@@ -15,7 +15,7 @@ const NoticiaMap = ({ auth, userLogged }) => {
     fetch(`http://localhost:4000/articulos/noticias/${params.id}`)
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
     // eslint-disable-next-line
   }, []);
 

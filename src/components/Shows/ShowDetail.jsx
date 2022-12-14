@@ -1,11 +1,13 @@
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import StickyNav from "../NavBars/StickyNav";
 import Footer from "../Footer";
 import CommentBox from "../Comments/CommentBox";
+import SavePosts from "../SavedPost/SavePosts";
+import LikePosts from "../LikedPosts/LikePosts";
 
 // 2.2
 
-const ShowDetail = ({ data }) => {
+const ShowDetail = ({ data, auth, userLogged }) => {
   return (
     <>
       <StickyNav />
@@ -17,22 +19,23 @@ const ShowDetail = ({ data }) => {
           </div>
           <br />
           <img
-            className="img-fluid mb-2 px-4" // se coloca padding por tamaño de img
+            className="img-fluid mb-2"
             style={{ height: "100%", width: "100%" }}
             src={data.image}
             alt={data.alt}
           />
+          <br />
         </div>
-        <br />
+        {auth ? <SavePosts userLogged={userLogged} data={data} /> : undefined}
+        {auth ? <LikePosts userLogged={userLogged} data={data} /> : undefined}
         <Container>
           <hr />
-          <h3>{data.description}</h3>
+          <h1>{data.subtitle}</h1>
           <article className="font-roboto">{data.body}</article>
         </Container>
         <br />
+        {/*   {auth ? <CommentBox userLogged={userLogged} /> : undefined} */}
       </Container>
-      {/* AGREGAR COMENT BOX */}
-      <CommentBox />
       <Footer />
     </>
   );

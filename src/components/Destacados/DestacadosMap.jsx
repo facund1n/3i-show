@@ -13,7 +13,7 @@ const DestacadosMap = () => {
     fetch("http://localhost:4000/articulos/destacados/")
       .then((res) => res.json())
       .then((json) => setData(json))
-      .finally(() => setIsLoading(false));
+      .then(() => setIsLoading(false));
   }, []);
 
   return <>{isLoading ? <Loader /> : <DestacadosGrid data={data} />}</>;
