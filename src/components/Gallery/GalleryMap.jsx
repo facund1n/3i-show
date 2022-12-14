@@ -7,19 +7,17 @@ import GallerySlider from "./GallerySlider";
 
 const GalleryMap = () => {
   // eslint-disable-next-line
-  const [images, setImages] = useState([]);
+  const [imagenes, setImagenes] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
     fetch("http://localhost:4000/galerias/all")
       .then((res) => res.json())
-      .then((json) =>
-        setImages(localStorage.setItem("images", JSON.stringify(json)))
-      )
-      .finally(() => setIsLoading(false));
+      .then((json) => setImagenes(json))
+      .then(() => setIsLoading(false));
   }, []);
 
-  return <>{isLoading ? <Loader /> : <GallerySlider />}</>;
+  return <>{isLoading ? <Loader /> : <GallerySlider imagenes={imagenes} />}</>;
 };
 
 export default GalleryMap;
