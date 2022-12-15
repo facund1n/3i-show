@@ -32,6 +32,13 @@ const ShowDetail = ({ data, auth, userLogged }) => {
           <hr />
           <h1>{data.subtitle}</h1>
           <article className="font-roboto">{data.body}</article>
+          <a
+            href={data.ticketsUrl}
+            className="font-roboto f-yellow"
+            style={{ textDecoration: "inherit" }}
+          >
+            {data.ticketsUrl}
+          </a>
         </Container>
         <br />
         {/*   {auth ? <CommentBox userLogged={userLogged} /> : undefined} */}
