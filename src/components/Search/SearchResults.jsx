@@ -62,7 +62,11 @@ const SearchResults = () => {
               style={{ textDecoration: "inherit" }}
             >
               <Card className="my-1">
-                <Card.Body className="b-grey">{item.title}</Card.Body>
+                <Card.Body className="b-grey">
+                  {item.title}
+                  <br />
+                  <strong>({item.category})</strong>
+                </Card.Body>
               </Card>
             </Link>
           ))
