@@ -56,9 +56,13 @@ const SearchResults = () => {
           </span>
         ) : (
           results.map((item, k) => (
-            <Link to={`/articulos/${item.category}/${item._id}`} key={k}>
-              <Card>
-                <Card.Body className="bg-dark">{item.title}</Card.Body>
+            <Link
+              to={`/articulos/${item.category}/${item._id}`}
+              key={k}
+              style={{ textDecoration: "inherit" }}
+            >
+              <Card className="my-1">
+                <Card.Body className="b-grey">{item.title}</Card.Body>
               </Card>
             </Link>
           ))
