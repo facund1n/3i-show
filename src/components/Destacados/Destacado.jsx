@@ -14,17 +14,19 @@ const Destacado = ({ data }) => {
           <div>
             <Card.Img
               variant="top"
-              style={{ height: "190px" }}
+              style={{ height: "150px" }}
               src={data.image}
               alt={data.alt}
             />
           </div>
-          <div
-            className="mt-2 text-center d-flex align-items-center"
-            style={{ height: "200px" }}
-          >
-            <h4>{data.title}</h4>
-          </div>
+          <Card.Body>
+            <Card.Title
+              className="mt-2 text-center d-flex align-items-center"
+              style={{ height: "120px" }}
+            >
+              <h6>{data.title}</h6>
+            </Card.Title>
+          </Card.Body>
         </Card>
       </Link>
     </>

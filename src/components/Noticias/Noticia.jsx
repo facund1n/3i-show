@@ -15,19 +15,13 @@ const Noticia = ({ data }) => {
           style={{ height: "95%" }}
         >
           <Figure.Image
-            className="img-fluid "
-            style={{ height: "70%" }}
-            width={600}
-            height={600}
+            className="img-fluid"
+            height={"50%"}
             src={data.image}
             alt={data.alt}
           />
-          <Figure.Caption
-            as="h1"
-            className="text-white text-center"
-            style={{ height: "30%" }}
-          >
-            {data.title}
+          <Figure.Caption className="text-white text-center">
+            <h6>{data.title}</h6>
           </Figure.Caption>
         </Figure>
       </Link>
