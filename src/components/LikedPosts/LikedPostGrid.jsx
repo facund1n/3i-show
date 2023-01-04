@@ -20,7 +20,7 @@ const LikedPostGrid = ({ data }) => {
         <h3>Liked:</h3>
         {data ? (
           <CardGroup>
-            <Row xs={1} md={3} lg={4}>
+            <Row xs={1} md={3} lg={5}>
               {data.map((data, k) => (
                 <Col key={k}>
                   <Liked data={data} />

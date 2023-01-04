@@ -20,7 +20,7 @@ const SavedPostGrid = ({ data }) => {
         <h3>Post Guardados:</h3>
         {dataExist ? (
           <CardGroup>
-            <Row xs={2} md={4} lg={5}>
+            <Row xs={1} md={3} lg={5}>
               {data.map((data, i) => (
                 <Col key={i}>
                   <Saved data={data} />
