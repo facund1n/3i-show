@@ -1,4 +1,4 @@
-import { Container, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // 1.3
@@ -6,24 +6,26 @@ import { Link } from "react-router-dom";
 const Saved = ({ data }) => {
   return (
     <>
-      <Container>
-        <Link to={`${data[1]}`} style={{ textDecoration: "inherit" }}>
-          <Card className="mb-2 bg-dark links" border="black">
+      <Link to={`${data[1]}`} style={{ textDecoration: "inherit" }}>
+        <Card className="mb-2 bg-dark links" border="black">
+          <div>
             <Card.Img
-              className="img-fluid mb-2"
+              variant="top"
               style={{ height: "150px" }}
               src={data[0].image}
               alt={data[0].alt}
             />
-            <div
+          </div>
+          <Card.Body>
+            <Card.Title
               className="mt-2 text-center d-flex align-items-center"
-              style={{ height: "150px" }}
+              style={{ height: "120px" }}
             >
-              <h4>{data[0].title}</h4>
-            </div>
-          </Card>
-        </Link>
-      </Container>
+              <h6>{data[0].title}</h6>
+            </Card.Title>
+          </Card.Body>
+        </Card>
+      </Link>
     </>
   );
 };

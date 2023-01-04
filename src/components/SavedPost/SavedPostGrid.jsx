@@ -1,4 +1,4 @@
-import { CardGroup, Col, Container, Row } from "react-bootstrap";
+import { CardGroup, Container, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import Saved from "./Saved"; // Componente
 import StickyNav from "../NavBars/StickyNav";
@@ -7,7 +7,7 @@ import Footer from "../Footer";
 // 1.2
 
 const SavedPostGrid = ({ data }) => {
-  const [dataExist, setDataExist] = useState(false);
+  const [dataExist, setDataExist] = useState();
   useEffect(() => {
     data ? setDataExist(true) : setDataExist(false);
     // eslint-disable-next-line
@@ -16,11 +16,11 @@ const SavedPostGrid = ({ data }) => {
   return (
     <>
       <StickyNav />
-      <Container className="flex-column justify-content-center align-items-center mt-5 min-vh-100 b-black">
+      <Container className="mt-3 d-flex flex-column min-vh-100">
         <h3>Post Guardados:</h3>
-        {data ? (
+        {dataExist ? (
           <CardGroup>
-            <Row xs={1} md={3} lg={4}>
+            <Row xs={2} md={4} lg={5}>
               {data.map((data, i) => (
                 <Col key={i}>
                   <Saved data={data} />
@@ -31,8 +31,8 @@ const SavedPostGrid = ({ data }) => {
         ) : (
           <span>No hay post guardados.</span>
         )}
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 };
