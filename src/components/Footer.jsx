@@ -11,7 +11,7 @@ const Footer = () => {
           <Col className="align-self-center">
             <img
               alt="logo"
-              src="https://tinypic.host/images/2022/12/14/HMB.png"
+              src="https://tinypic.host/images/2023/01/24/HMB.png"
               className="img-fluid me-auto"
             />
           </Col>

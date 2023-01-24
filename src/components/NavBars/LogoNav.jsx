@@ -17,7 +17,7 @@ function LogoNav() {
         <Navbar.Brand className="ms-auto">
           <img
             alt="logo2"
-            src="https://tinypic.host/images/2022/12/14/HMB.png"
+            src="https://tinypic.host/images/2023/01/24/HMB.png"
             height="40px"
             className="d-inline-block align-top m-auto"
           />
