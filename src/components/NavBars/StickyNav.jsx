@@ -14,7 +14,7 @@ function StickyNav() {
         <Navbar.Brand href="/">
           <img
             alt="logo"
-            src="https://tinypic.host/images/2022/12/14/logoe2de43a3ad4e2821.png"
+            src="https://tinypic.host/images/2023/01/24/logo.png"
             height="20px"
             className="d-block m-0 p-0"
           />
