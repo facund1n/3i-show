@@ -12,7 +12,7 @@ const LikedButton = ({ userLogged }) => {
       .then((json) => setData(json))
       .then(data.map((d) => setCountLiked(d.liked)));
     // eslint-disable-next-line
-  }, [data]);
+  }, [data, countLiked]);
 
   return (
     <>

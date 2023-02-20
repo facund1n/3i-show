@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 
 import LikedButton from "./LikedButton";
 import SavedButton from "./SavedButton";
+import AllPosts from "./AllPosts";
 
 const UserPanel = ({ userLogged }) => {
   return (
@@ -13,6 +14,8 @@ const UserPanel = ({ userLogged }) => {
         <StickyNav />
         <SavedButton userLogged={userLogged} />
         <LikedButton userLogged={userLogged} />
+        {userLogged === "admin" ? <span>Nuevo post</span> : <span></span>}
+        {userLogged === "admin" ? <AllPosts /> : <span></span>}
       </Container>
       <Footer />
     </>

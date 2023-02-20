@@ -12,7 +12,7 @@ const SavedButton = ({ userLogged }) => {
       .then((json) => setData(json))
       .then(data.map((d) => setCountSaved(d.saved)));
     // eslint-disable-next-line
-  }, [data]);
+  }, [data, countSaved]);
 
   return (
     <>
