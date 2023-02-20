@@ -30,7 +30,7 @@ const Post = ({ data }) => {
             <Link
               to={`/articulos/destacados/${data._id}`}
               style={{ textDecoration: "inherit" }}
-              className="f-yellow"
+              className="f-yellow my-1"
             >
               Ver Post
             </Link>
