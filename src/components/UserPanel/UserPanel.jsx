@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 
 import LikedButton from "./LikedButton";
 import SavedButton from "./SavedButton";
-import AllPosts from "./AllPosts";
+import AllPosts from "../CRUD/AllPosts";
 
 const UserPanel = ({ userLogged }) => {
   return (

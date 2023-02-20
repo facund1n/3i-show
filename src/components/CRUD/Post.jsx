@@ -1,13 +1,17 @@
 import { Row, Col, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import DeletePostButton from "./DeletePostButton";
+import EditPostButton from "./EditPostButton";
 // 1.3
 
 const Post = ({ data }) => {
   return (
     <>
       <ListGroup.Item className="mb-1 bg-dark" border="black">
-        <Row xs={1} md={5} lg={5}>
+        <Row>
+          <b>ID: {data._id} </b>
+        </Row>
+        <Row xs={1} md={1} lg={5}>
           <Col>
             <img
               variant="top"
@@ -22,7 +26,6 @@ const Post = ({ data }) => {
             <b>Sub-título:</b>
             <h6>{data.subtitle}</h6>
           </Col>
-
           <Col className="text-end">
             <Link
               to={`/articulos/destacados/${data._id}`}
@@ -33,10 +36,10 @@ const Post = ({ data }) => {
             </Link>
           </Col>
           <Col className="text-end">
-            <span>Editar</span>
+            <EditPostButton />
           </Col>
           <Col className="text-end">
-            <span>Borrar</span>
+            <DeletePostButton />
           </Col>
         </Row>
       </ListGroup.Item>
