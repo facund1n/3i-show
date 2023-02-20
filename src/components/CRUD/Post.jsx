@@ -36,10 +36,10 @@ const Post = ({ data }) => {
             </Link>
           </Col>
           <Col className="text-end">
-            <EditPostButton />
+            <EditPostButton data={data} />
           </Col>
           <Col className="text-end">
-            <DeletePostButton />
+            <DeletePostButton data={data} />
           </Col>
         </Row>
       </ListGroup.Item>
