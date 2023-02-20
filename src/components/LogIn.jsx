@@ -10,9 +10,9 @@ const LogIn = () => {
 
   return (
     <>
-      <Link className="f-yellow links" onClick={() => setShow(true)}>
+      <div className="f-yellow links" onClick={() => setShow(true)}>
         INICIAR SESIÓN
-      </Link>
+      </div>
       <div className="f-yellow mx-1"> | </div>
       <Modal
         show={show}
