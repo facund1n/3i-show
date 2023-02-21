@@ -13,10 +13,20 @@ const UserPanel = ({ userLogged }) => {
     <>
       <Container className="px-0 d-flex flex-column min-vh-100">
         <StickyNav />
-        <SavedButton userLogged={userLogged} />
-        <LikedButton userLogged={userLogged} />
-        {userLogged === "admin" ? <NewPostButton /> : <span></span>}
-        {userLogged === "admin" ? <AllPosts /> : <span></span>}
+        {userLogged !== "admin" ? (
+          <SavedButton userLogged={userLogged} />
+        ) : (
+          <span></span>
+        )}
+        {userLogged !== "admin" ? (
+          <LikedButton userLogged={userLogged} />
+        ) : (
+          <span></span>
+        )}
+        <Container>
+          {userLogged === "admin" ? <NewPostButton /> : <span></span>}
+          {userLogged === "admin" ? <AllPosts /> : <span></span>}
+        </Container>
       </Container>
       <Footer />
     </>

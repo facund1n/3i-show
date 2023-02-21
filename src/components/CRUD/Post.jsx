@@ -10,6 +10,7 @@ const Post = ({ data }) => {
       <ListGroup.Item className="mb-1 bg-dark" border="black">
         <Row>
           <b>ID: {data._id} </b>
+          <b>CATEGORÍA: {data.category} </b>
         </Row>
         <Row xs={1} md={1} lg={5}>
           <Col>
@@ -30,16 +31,16 @@ const Post = ({ data }) => {
             <Link
               to={`/articulos/destacados/${data._id}`}
               style={{ textDecoration: "inherit" }}
-              className="f-yellow"
+              className="f-yellow my-1"
             >
               Ver Post
             </Link>
           </Col>
           <Col className="text-end">
-            <EditPostButton />
+            <EditPostButton data={data} />
           </Col>
           <Col className="text-end">
-            <DeletePostButton />
+            <DeletePostButton data={data} />
           </Col>
         </Row>
       </ListGroup.Item>
