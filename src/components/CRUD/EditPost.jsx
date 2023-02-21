@@ -148,6 +148,8 @@ export default function EditPost({ data }) {
         className="mb-2"
         id="category"
         name="category"
+        onChange={formik.handleChange}
+        value={formik.values.category}
       >
         <option value="destacados" className="f-black">
           Destacados
