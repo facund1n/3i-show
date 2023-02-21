@@ -10,6 +10,7 @@ const Post = ({ data }) => {
       <ListGroup.Item className="mb-1 bg-dark" border="black">
         <Row>
           <b>ID: {data._id} </b>
+          <b>CATEGORÍA: {data.category} </b>
         </Row>
         <Row xs={1} md={1} lg={5}>
           <Col>
