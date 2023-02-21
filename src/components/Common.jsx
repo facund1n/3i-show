@@ -41,3 +41,17 @@ export const LikeError = styled.span`
   min-height: 100%;
   font-weight: 500;
 `;
+
+export const Success = styled.span`
+  color: #8ffc00;
+  font-size: 20px;
+  min-height: 100%;
+  font-weight: 600;
+`;
+
+export const Error = styled.span`
+  color: #f1700f;
+  font-size: 20px;
+  min-height: 20px;
+  font-weight: 600;
+`;

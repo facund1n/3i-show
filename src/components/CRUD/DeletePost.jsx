@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import { FormSuccess, FormError } from "../Common";
+import { Success, Error } from "../Common";
 import axios from "axios";
 
 const DeletePost = ({ data }) => {
@@ -39,8 +39,8 @@ const DeletePost = ({ data }) => {
       <br />
       <span>SUBTÍTULO: {data.subtitle}</span>
       <br />
-      {!error && <FormSuccess>{success ? success : ""}</FormSuccess>}
-      {!success && <FormError>{error ? error : ""}</FormError>}
+      {!error && <Success>{success ? success : ""}</Success>}
+      {!success && <Error>{error ? error : ""}</Error>}
       <br />
       <Button variant="danger" onClick={deleteById}>
         BORRAR
