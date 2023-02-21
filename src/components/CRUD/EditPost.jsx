@@ -149,6 +149,7 @@ export default function EditPost({ data }) {
         id="category"
         name="category"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.category}
       >
         <option value="destacados" className="f-black">
