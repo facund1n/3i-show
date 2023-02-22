@@ -11,10 +11,21 @@ const validationSchema = yup.object({
   title: yup.string().required("Requerido"),
   subtitle: yup.string().required("Requerido"),
   body: yup.string().required("Requerido"),
-  image: yup.string().required("Requerido"),
+  image: yup
+    .string()
+    .matches(
+      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      "Ingrese URL correcta"
+    )
+    .required("Requerido"),
   alt: yup.string().required("Requerido"),
   category: yup.string().required("Requerido"),
-  ticketsUrl: yup.string(),
+  ticketsUrl: yup
+    .string()
+    .matches(
+      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      "Ingrese URL correcta"
+    ),
 });
 
 export default function NewPost() {
