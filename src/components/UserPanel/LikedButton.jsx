@@ -3,16 +3,16 @@ import { Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const LikedButton = ({ userLogged }) => {
-  const [data, setData] = useState([]);
+  const [liked, setLiked] = useState([]);
   const [countLiked, setCountLiked] = useState("");
 
   useEffect(() => {
     fetch(`https://3i-show-api-node.vercel.app/users/${userLogged}/liked/`)
       .then((res) => res.json())
-      .then((json) => setData(json))
-      .then(data.map((d) => setCountLiked(d.liked)));
+      .then((json) => setLiked(json))
+      .then(liked.map((l) => setCountLiked(l.liked)));
     // eslint-disable-next-line
-  }, [data, countLiked]);
+  }, [liked.length]);
 
   return (
     <>
