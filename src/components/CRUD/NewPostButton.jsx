@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import NewPost from "./NewPost";
 
-const DeletePostButton = ({ data }) => {
+const NewPostButton = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   return (
@@ -32,7 +32,7 @@ const DeletePostButton = ({ data }) => {
         </Modal.Header>
         <div className="b-black">
           <Modal.Body>
-            <NewPost data={data} />
+            <NewPost />
           </Modal.Body>
         </div>
       </Modal>
@@ -40,4 +40,4 @@ const DeletePostButton = ({ data }) => {
   );
 };
 
-export default DeletePostButton;
+export default NewPostButton;
