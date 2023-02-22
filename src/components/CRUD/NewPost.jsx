@@ -32,7 +32,6 @@ export default function NewPost() {
         console.log("Error?", err.response.data.message);
       });
     if (response) {
-      console.log("LLEGUË");
       setError(null);
       setSuccess(response.data.message);
       formik.resetForm();
