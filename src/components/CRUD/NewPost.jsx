@@ -11,21 +11,10 @@ const validationSchema = yup.object({
   title: yup.string().required("Requerido"),
   subtitle: yup.string().required("Requerido"),
   body: yup.string().required("Requerido"),
-  image: yup
-    .string()
-    .matches(
-      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-      "Ingrese URL correcta"
-    )
-    .required("Requerido"),
+  image: yup.string().required("Requerido"),
   alt: yup.string().required("Requerido"),
   category: yup.string().required("Requerido"),
-  ticketsUrl: yup
-    .string()
-    .matches(
-      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-      "Ingrese URL correcta"
-    ),
+  ticketsUrl: yup.string(),
 });
 
 export default function NewPost() {
@@ -43,6 +32,7 @@ export default function NewPost() {
         console.log("Error?", err.response.data.message);
       });
     if (response) {
+      console.log("LLEGUË");
       setError(null);
       setSuccess(response.data.message);
       formik.resetForm();
@@ -60,7 +50,7 @@ export default function NewPost() {
       body: "",
       image: "",
       alt: "",
-      category: "",
+      category: "destacados",
       ticketsUrl: "",
     },
     validateOnBlur: true,
@@ -70,7 +60,7 @@ export default function NewPost() {
 
   return (
     <Form onSubmit={formik.handleSubmit}>
-      <h3>NUEVO POST:</h3>
+      <h3>EDITAR POST:</h3>
       <hr />
       {!error && <Success>{success ? success : ""}</Success>}
       {!success && <Error>{error ? error : ""}</Error>}
@@ -170,6 +160,7 @@ export default function NewPost() {
           Shows
         </option>
       </Form.Select>
+
       <Form.Group className="mb-3">
         <Form.Label>URL Tickets (en caso que sea Show)</Form.Label>
         <Form.Control
