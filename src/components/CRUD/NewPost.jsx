@@ -8,13 +8,25 @@ import { Success, Error } from "../Common";
 import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
-  title: yup.string().required("Requerido"),
-  subtitle: yup.string().required("Requerido"),
-  body: yup.string().required("Requerido"),
-  image: yup.string().required("Requerido"),
+  title: yup
+    .string()
+    .min(2, "mínimo 2 carácteres")
+    .max(85, "máximo 85")
+    .required("Requerido"),
+  subtitle: yup
+    .string()
+    .min(2, "mínimo 2 carácteres")
+    .max(85, "máximo 85")
+    .required("Requerido"),
+  body: yup
+    .string()
+    .min(10, "mínimo 10 carácteres")
+    .max(500, "máximo 500")
+    .required("Requerido"),
+  image: yup.string().url("ingrese una URL válida").required("Requerido"),
   alt: yup.string().required("Requerido"),
   category: yup.string().required("Requerido"),
-  ticketsUrl: yup.string(),
+  ticketsUrl: yup.string().url("ingrese una URL válida"),
 });
 
 export default function NewPost() {
@@ -64,7 +76,7 @@ export default function NewPost() {
       {!error && <Success>{success ? success : ""}</Success>}
       {!success && <Error>{error ? error : ""}</Error>}
       <Form.Group className="mb-3">
-        <Form.Label>Título</Form.Label>
+        <Form.Label>Título (mínimo 2 máximo 85) *</Form.Label>
         <Form.Control
           id="title"
           name="title"
@@ -79,7 +91,7 @@ export default function NewPost() {
         ) : null}
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Sub-título</Form.Label>
+        <Form.Label>Sub-título (mínimo 2 máximo 85) *</Form.Label>
         <Form.Control
           id="subtitle"
           name="subtitle"
@@ -94,7 +106,7 @@ export default function NewPost() {
         ) : null}
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Cuerpo artículo</Form.Label>
+        <Form.Label>Cuerpo artículo (mínimo 10 máximo 500) *</Form.Label>
         <Form.Control
           id="body"
           name="body"
@@ -110,12 +122,12 @@ export default function NewPost() {
         ) : null}
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>URL imágen</Form.Label>
+        <Form.Label>URL imágen *</Form.Label>
         <Form.Control
           id="image"
           name="image"
           type="text"
-          placeholder="URL imágen"
+          placeholder="ej.: http://imgen.com/imagen.png"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.image}
@@ -125,7 +137,7 @@ export default function NewPost() {
         ) : null}
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>ALT imágen</Form.Label>
+        <Form.Label>ALT imágen *</Form.Label>
         <Form.Control
           id="alt"
           name="alt"
@@ -139,7 +151,7 @@ export default function NewPost() {
           <div className="f-yellow mt-1">{formik.errors.alt}</div>
         ) : null}
       </Form.Group>
-      <Form.Label>Categoría</Form.Label>
+      <Form.Label>Categoría *</Form.Label>
       <Form.Select
         aria-label="Default select example"
         className="mb-2"
@@ -166,7 +178,7 @@ export default function NewPost() {
           id="ticketsUrl"
           name="ticketsUrl"
           type="text"
-          placeholder="URL tickets"
+          placeholder="ej.: https://tickets.com/"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.ticketsUrl}
@@ -175,7 +187,8 @@ export default function NewPost() {
           <div className="f-yellow mt-1">{formik.errors.ticketsUrl}</div>
         ) : null}
       </Form.Group>
-      <div className="d-grid gap-2 mb-2">
+      <span>* campos obligatorios</span>
+      <div className="d-grid gap-2 my-2">
         <Button type="submit" variant="success">
           <strong>CREAR POST</strong>
         </Button>
